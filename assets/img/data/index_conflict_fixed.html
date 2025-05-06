@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="assets/css/style.css" />
         <!-- ใช้ไฟล์ slide.js ที่แยกออกมาต่างหาก -->
         <script src="assets/js/slide.js"></script>
-        <script src="assets/js/carousel.js"></script>
-        <script src="assets/js/slideebook.js"></script>
+        <script src="carousel_fixed.js"></script>
+        <script src="slideebook_fixed.js"></script>
         <link href="/dist/styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -633,7 +633,7 @@
                 </div>
 
                 <!-- Carousel -->
-                <div class="relative py-4 px-8">
+                <div class="relative py-4 px-8s">
                     <div
                         class="flex overflow-x-scroll pb-8 hide-scrollbar my-0 mx-8"
                         id="seminar-carousel"
@@ -903,15 +903,15 @@
                 </button>
             </div>
         </section>
-        <section class="bg-white">
-            <div class="p-20 mx-32 rounded-[40px] bg-[#F0EFF6]">
+        <section class="bg-[#F0EFF6] p-8 w-[1200px] mx-auto rounded-[40px]">
+            <div class="max-w-6xl mx-auto">
                 <!-- Header -->
                 <div class="flex justify-between items-center mb-8">
                     <h1 class="text-4xl font-bold text-orange-400">
                         รายงานผลการศึกษา
                     </h1>
                     <button
-                        class="h-[65px] border rounded-[40px] border-[#6B61A0] flex justify-center items-center text-[#6B61A0] font-semibold text-[18px] w-[200px]"
+                        class="bg-white border border-purple-500 text-purple-600 px-6 py-2 rounded-full"
                     >
                         ดูเพิ่มเติม
                     </button>
@@ -932,21 +932,21 @@
                             >
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
                                 </div>
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
                                 </div>
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
@@ -959,21 +959,21 @@
                             >
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
                                 </div>
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
                                 </div>
                                 <div class="w-1/3">
                                     <img
-                                        src="assets/img/book.png"
+                                        src="https://placehold.co/400x450/red/white"
                                         alt="Transport Safety Manager (TSM) training manual"
                                         class="w-full h-auto rounded"
                                     />
@@ -1025,15 +1025,15 @@
 
                     <!-- Indicator Dots -->
                     <div
-                        class="flex justify-center bg-[#FFFBEE] rounded-full max-w-32 mx-auto mt-10"
+                        class="flex justify-center mt-4"
                         id="report-indicator-container"
                     >
                         <button
-                            class="h-3 w-1/2 rounded-full bg-yellow-400"
+                            class="mx-1 h-2 w-8 rounded-full bg-yellow-400"
                             data-index="0"
                         ></button>
                         <button
-                            class="h-3 w-1/2 rounded-full bg-[#FFFBEE]"
+                            class="mx-1 h-2 w-8 rounded-full bg-gray-300"
                             data-index="1"
                         ></button>
                     </div>
