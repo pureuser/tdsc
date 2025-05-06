@@ -41,3 +41,5 @@ ENV/
 # Build
 dist/
 build/
+package-lock.json
+package.json

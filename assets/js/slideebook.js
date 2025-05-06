@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
         reportTrack.style.transform = `translateX(-${currentIndex * 100}%)`
         reportIndicators.forEach((indicator, index) => {
             if (index === currentIndex) {
-                indicator.classList.remove('bg-gray-300')
+                indicator.classList.remove('bg-[#FFFBEE]')
                 indicator.classList.add('bg-yellow-400')
             } else {
                 indicator.classList.remove('bg-yellow-400')
-                indicator.classList.add('bg-gray-300')
+                indicator.classList.add('bg-[#FFFBEE]')
             }
         })
     }
