@@ -636,7 +636,7 @@
                 <div class="relative py-4 px-8s">
                     <div
                         class="flex overflow-x-scroll pb-8 hide-scrollbar my-0 mx-8"
-                        id="carousel"
+                        id="seminar-carousel"
                     >
                         <div class="flex pl-6 pr-[7.5rem] gap-5">
                             <!-- Card 1 -->
@@ -864,7 +864,7 @@
                     </div>
 
                     <!-- Navigation buttons -->
-                    <div class="nav-button prev" id="prev-btn">
+                    <div class="nav-button prev" id="seminar-prev-btn">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5"
@@ -879,7 +879,7 @@
                         </svg>
                     </div>
 
-                    <div class="nav-button next" id="next-btn">
+                    <div class="nav-button next" id="seminar-next-btn">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5"
@@ -911,7 +911,7 @@
                         รายงานผลการศึกษา
                     </h1>
                     <button
-                        class="bg-white border border-purple-500 text-purple-600 px-6 py-2 rounded-full"
+                        class="h-[65px] border rounded-[40px] border-[#6B61A0] flex justify-center items-center text-[#6B61A0] font-semibold text-[18px] w-[200px]"
                     >
                         ดูเพิ่มเติม
                     </button>
@@ -920,11 +920,11 @@
                 <!-- Carousel Container -->
                 <div class="relative">
                     <!-- Carousel Items -->
-                    <div class="overflow-hidden" id="carousel-container">
+                    <div class="overflow-hidden" id="report-carousel-container">
                         <!-- Pages of carousel (each page has 3 items) -->
                         <div
                             class="flex transition-transform duration-500 ease-in-out"
-                            id="carousel-track"
+                            id="report-carousel-track"
                         >
                             <!-- Page 1 -->
                             <div
@@ -984,7 +984,7 @@
 
                     <!-- Navigation Arrows -->
                     <button
-                        id="prev-button"
+                        id="report-prev-btn"
                         class="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md text-purple-500"
                     >
                         <svg
@@ -1004,7 +1004,7 @@
                     </button>
 
                     <button
-                        id="next-button"
+                        id="report-next-btn"
                         class="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-2 rounded-full shadow-md text-purple-500"
                     >
                         <svg
@@ -1026,7 +1026,7 @@
                     <!-- Indicator Dots -->
                     <div
                         class="flex justify-center mt-4"
-                        id="indicator-container"
+                        id="report-indicator-container"
                     >
                         <button
                             class="mx-1 h-2 w-8 rounded-full bg-yellow-400"

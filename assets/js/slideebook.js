@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get DOM elements
-    const carouselTrack = document.getElementById('carousel-track')
-    const prevButton = document.getElementById('prev-button')
-    const nextButton = document.getElementById('next-button')
-    const indicators = document.querySelectorAll('#indicator-container button')
+    const reportTrack = document.getElementById('report-carousel-track')
+    const reportPrevBtn = document.getElementById('report-prev-btn')
+    const reportNextBtn = document.getElementById('report-next-btn')
+    const reportIndicators = document.querySelectorAll(
+        '#report-indicator-container button'
+    )
 
     let currentIndex = 0
-    const pageCount = document.querySelectorAll('#carousel-track > div').length
+    const pageCount = document.querySelectorAll(
+        '#report-carousel-track > div'
+    ).length
 
-    // Function to update the carousel
     function updateCarousel() {
-        // Update the transform to show the current page
-        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`
-
-        // Update indicator dots
-        indicators.forEach((indicator, index) => {
+        reportTrack.style.transform = `translateX(-${currentIndex * 100}%)`
+        reportIndicators.forEach((indicator, index) => {
             if (index === currentIndex) {
                 indicator.classList.remove('bg-gray-300')
                 indicator.classList.add('bg-yellow-400')
@@ -25,43 +24,34 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    // Previous button click
-    prevButton.addEventListener('click', () => {
+    function goToNext() {
+        currentIndex = currentIndex === pageCount - 1 ? 0 : currentIndex + 1
+        updateCarousel()
+    }
+
+    reportPrevBtn.addEventListener('click', () => {
         currentIndex = currentIndex === 0 ? pageCount - 1 : currentIndex - 1
         updateCarousel()
     })
 
-    // Next button click
-    nextButton.addEventListener('click', () => {
-        currentIndex = currentIndex === pageCount - 1 ? 0 : currentIndex + 1
-        updateCarousel()
-    })
+    reportNextBtn.addEventListener('click', goToNext)
 
-    // Indicator dots click
-    indicators.forEach((indicator) => {
+    reportIndicators.forEach((indicator) => {
         indicator.addEventListener('click', () => {
             currentIndex = parseInt(indicator.getAttribute('data-index'))
             updateCarousel()
         })
     })
 
-    // Initialize carousel
     updateCarousel()
 
-    // Optional: Auto-play functionality
-    let autoPlayInterval = setInterval(() => {
-        goToNext()
-    }, 5000)
+    let autoPlayInterval = setInterval(goToNext, 5000)
 
-    // // Pause auto-play on mouse enter
-    carouselTrack.addEventListener('mouseenter', () => {
+    reportTrack.addEventListener('mouseenter', () => {
         clearInterval(autoPlayInterval)
     })
 
-    // // Resume auto-play on mouse leave
-    carouselTrack.addEventListener('mouseleave', () => {
-        autoPlayInterval = setInterval(() => {
-            goToNext()
-        }, 5000)
+    reportTrack.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(goToNext, 5000)
     })
 })
