@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create container for bullets
         const bulletContainer = document.createElement('div')
         bulletContainer.className =
-            'bullets-container absolute bottom-16 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3 bg-[#FFFBEE]  rounded-[40px] w-full max-w-[120px] justify-center items-center h-3'
+            'bullets-container absolute bottom-16 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3 bg-[#FFFBEE]  rounded-[40px] w-full max-w-[120px] justify-center items-center h-3 lg;block hidden'
 
         // Create a bullet for each slide
         for (let i = 0; i < totalSlides; i++) {
