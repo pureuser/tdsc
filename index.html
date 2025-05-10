@@ -14,6 +14,227 @@
         <link href="/dist/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <header class="bg-white shadow-sm relative z-30 lg:hidden">
+            <div
+                class="container mx-auto px-4 py-3 flex justify-between items-center"
+            >
+                <!-- Search Icon - Left -->
+                <div>
+                    <button class="text-[#6B61A0] focus:outline-none">
+                        <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M21 21L17.4584 17.4521L21 21ZM19.4211 12.7105C19.4211 14.4903 18.7141 16.1971 17.4556 17.4556C16.1971 18.7141 14.4903 19.4211 12.7105 19.4211C10.9308 19.4211 9.22394 18.7141 7.96547 17.4556C6.707 16.1971 6 14.4903 6 12.7105C6 10.9308 6.707 9.22394 7.96547 7.96547C9.22394 6.707 10.9308 6 12.7105 6C14.4903 6 16.1971 6.707 17.4556 7.96547C18.7141 9.22394 19.4211 10.9308 19.4211 12.7105V12.7105Z"
+                                stroke="#6B61A0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Logo - Center -->
+                <img src="assets/img/logo.png" class="h-7" alt="" />
+
+                <!-- Menu Button - Right -->
+                <div>
+                    <button
+                        id="mobileMenuToggle"
+                        class="text-[#6B61A0] focus:outline-none"
+                    >
+                        <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4.8125 8.3125H23.1875M4.8125 14H17.1875M4.8125 19.6875H23.1875"
+                                stroke="#6B61A0"
+                                stroke-width="2"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            id="mobileMenuOverlay"
+            class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden opacity-0"
+            style="transition: opacity 0.3s ease-in-out"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobileMenuPanel"
+            class="fixed top-0 right-0 bottom-0 w-full bg-white z-50 transform translate-x-full overflow-y-auto"
+            style="transition: transform 0.3s ease-in-out"
+        >
+            <div
+                class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+            >
+                <button class="text-[#6B61A0] focus:outline-none">
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M21 21L17.4584 17.4521L21 21ZM19.4211 12.7105C19.4211 14.4903 18.7141 16.1971 17.4556 17.4556C16.1971 18.7141 14.4903 19.4211 12.7105 19.4211C10.9308 19.4211 9.22394 18.7141 7.96547 17.4556C6.707 16.1971 6 14.4903 6 12.7105C6 10.9308 6.707 9.22394 7.96547 7.96547C9.22394 6.707 10.9308 6 12.7105 6C14.4903 6 16.1971 6.707 17.4556 7.96547C18.7141 9.22394 19.4211 10.9308 19.4211 12.7105V12.7105Z"
+                            stroke="#6B61A0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+
+                <!-- Logo in Menu -->
+                <img src="assets/img/logo.png" class="h-7" alt="" />
+                <!-- Close Button -->
+                <button
+                    id="closeMobileMenu"
+                    class="text-[#6B61A0] focus:outline-none"
+                >
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7 21L20.93 7M21 21L7.07 7"
+                            stroke="#6B61A0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="px-4 py-2">
+                <ul>
+                    <!-- ระบบงาน (with submenu) -->
+                    <li class="border-b border-gray-100">
+                        <div
+                            class="flex justify-between items-center py-4 cursor-pointer"
+                            data-submenu="mobileSubmenu1"
+                        >
+                            <span class="text-[#6B61A0] text-xl">ระบบงาน</span>
+                            <i
+                                class="fas fa-chevron-down text-[#6B61A0] mobile-arrow-icon"
+                                style="transition: transform 0.3s ease"
+                            ></i>
+                        </div>
+                        <div
+                            id="mobileSubmenu1"
+                            class="max-h-0 overflow-hidden pl-4 pb-2"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >Q Mark</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >Q Cold Chain</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >การขนส่งวัตถุอันตราย (DG)</a
+                            >
+                        </div>
+                    </li>
+
+                    <!-- ข่าวสาร/สัมมนา -->
+                    <li class="py-4 border-b border-gray-100">
+                        <span class="text-[#6B61A0] text-xl"
+                            >ข่าวสาร/สัมมนา</span
+                        >
+                    </li>
+
+                    <!-- กฎระเบียบ/เอกสาร (with submenu) -->
+                    <li class="border-b border-gray-100">
+                        <div
+                            class="flex justify-between items-center py-4 cursor-pointer"
+                            data-submenu="mobileSubmenu2"
+                        >
+                            <span class="text-[#6B61A0] text-xl"
+                                >กฎระเบียบ/เอกสาร</span
+                            >
+                            <i
+                                class="fas fa-chevron-down text-[#6B61A0] mobile-arrow-icon"
+                                style="transition: transform 0.3s ease"
+                            ></i>
+                        </div>
+                        <div
+                            id="mobileSubmenu2"
+                            class="max-h-0 overflow-hidden pl-4 pb-2"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนตลาดขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนประกอบการขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ผลการศึกษา</a
+                            >
+                        </div>
+                    </li>
+
+                    <!-- หน่วยงาน -->
+                    <li class="py-4 border-b border-gray-100">
+                        <span class="text-[#6B61A0] text-xl">หน่วยงาน</span>
+                    </li>
+
+                    <!-- ติดต่อ/สอบถาม -->
+                    <li class="py-4 border-b border-gray-100">
+                        <span class="text-[#6B61A0] text-xl"
+                            >ติดต่อ/สอบถาม</span
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Copyright at bottom -->
+            <div
+                class="w-full text-center text-[#6B61A0] text-sm py-8 mt-8 border-t border-gray-100"
+            >
+                Copyright © 2025 - Transport Safety Manager: TSM
+            </div>
+        </div>
         <!-- Hero Section -->
         <section
             id="slider-container"
