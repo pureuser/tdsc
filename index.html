@@ -1035,12 +1035,13 @@
                             TRUCK DATA SERVICE CENTER
                         </h1>
                         <p
-                            class="text-[#6B61A0] lg:text-base text-sm mt-2 lg:text-left text-center"
+                            class="text-[#6B61A0] text-base mt-2 lg:text-left text-center lg:w-auto w-[335px] mx-auto"
                         >
                             ศูนย์รวมข้อมูลการขนส่งด้วยรถบรรทุก
                             กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า
                             สำนักการขนส่งสินค้า กรมการขนส่งทางบก
                         </p>
+                        <!-- desktop -->
                         <div class="lg:flex hidden mt-5">
                             <div class="flex gap-x-80">
                                 <div class="flex flex-col gap-y-2">
@@ -1144,6 +1145,111 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- mobile -->
+                        <div class="flex flex-col lg:hidden">
+                            <!-- Dropdown Menus -->
+                            <div class="px-4">
+                                <!-- แนะนำ -->
+                                <div class="border-b border-[#C9C9C9]">
+                                    <button
+                                        class="w-full py-4 flex justify-between items-center tdsc-secondary font-medium"
+                                        onclick="toggleDropdown('menu1')"
+                                    >
+                                        <span
+                                            class="text-base font-medium text-[#EEC102]"
+                                            >แนะนำ</span
+                                        >
+                                        <svg
+                                            id="arrow1"
+                                            class="w-5 h-5 transform transition-transform duration-200"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        id="menu1"
+                                        class="hidden bg-gray-50 py-2 px-4 rounded-lg mb-2"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >บริการของเรา</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ประชาสัมพันธ์</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ผลการศึกษา</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ติดต่อ/สอบถาม</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- เกี่ยวกับเรา -->
+                                <div class="border-b border-[#C9C9C9]">
+                                    <button
+                                        class="w-full py-4 flex justify-between items-center tdsc-secondary font-medium"
+                                        onclick="toggleDropdown('menu2')"
+                                    >
+                                        <span
+                                            class="text-base font-medium text-[#EEC102]"
+                                            >เกี่ยวกับเรา</span
+                                        >
+                                        <svg
+                                            id="arrow2"
+                                            class="w-5 h-5 transform transition-transform duration-200"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        id="menu2"
+                                        class="hidden bg-gray-50 py-2 px-4 rounded-lg mb-2"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ส่วนสถานีขนส่งสินค้า</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ส่วนประกอบการขนส่งสินค้า</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="flex mt-10 max-w-[1100px] flex-col">
                             <hr class="border border-[#BBB6D3] w-full" />
                             <div class="flex justify-between mt-5">
@@ -1197,17 +1303,32 @@
                 <img
                     src="assets/img/Image.png"
                     alt=""
-                    class="absolute right-0 bottom-0 z-20"
+                    class="absolute right-0 bottom-0 z-20 hidden lg:block"
                 />
                 <img
                     src="assets/img/Element.png"
                     alt=""
-                    class="bottom-0 absolute right-0 z-30"
+                    class="bottom-0 absolute right-0 z-30 hidden lg:block"
                 />
                 <hr
                     class="border-4 border-[#FADA54] absolute bottom-0 w-3/4 right-0 rounded-3xl"
                 />
             </div>
         </footer>
+        <script>
+            function toggleDropdown(menuId) {
+                const menu = document.getElementById(menuId)
+                const arrowId = 'arrow' + menuId.substring(4)
+                const arrow = document.getElementById(arrowId)
+
+                menu.classList.toggle('hidden')
+
+                if (menu.classList.contains('hidden')) {
+                    arrow.classList.remove('rotate-180')
+                } else {
+                    arrow.classList.add('rotate-180')
+                }
+            }
+        </script>
     </body>
 </html>
