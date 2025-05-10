@@ -11,7 +11,7 @@
         <script src="assets/js/carousel.js"></script>
         <script src="assets/js/slideebook.js"></script>
         <script src="assets/js/menu.js"></script>
-        <link href="/dist/styles.css" rel="stylesheet" />
+        <script src="assets/js/search.js"></script>
     </head>
     <body>
         <header class="bg-white shadow-sm relative z-30 lg:hidden">
@@ -20,7 +20,10 @@
             >
                 <!-- Search Icon - Left -->
                 <div>
-                    <button class="text-[#6B61A0] focus:outline-none">
+                    <button
+                        class="text-[#6B61A0] focus:outline-none"
+                        id="btnSearchMobile"
+                    >
                         <svg
                             width="28"
                             height="28"
@@ -84,7 +87,10 @@
             <div
                 class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
             >
-                <button class="text-[#6B61A0] focus:outline-none">
+                <button
+                    class="text-[#6B61A0] focus:outline-none"
+                    id="btnSearchMobile"
+                >
                     <svg
                         width="28"
                         height="28"
@@ -257,6 +263,79 @@
                 Copyright © 2025 - Transport Safety Manager: TSM
             </div>
         </div>
+        <!-- Search Overlay (ส่วนนี้ให้ใส่หลัง Mobile Menu ก่อนตัว Section หลัก) -->
+        <div
+            id="searchOverlay"
+            class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden opacity-0"
+            style="transition: opacity 0.3s ease-in-out"
+        >
+            <div class="absolute inset-0 flex items-start justify-center pt-24">
+                <div
+                    class="bg-white w-full max-w-2xl rounded-lg shadow-lg transform translate-y-[-20px] opacity-0 transition-all duration-300"
+                    id="searchPanel"
+                >
+                    <div
+                        class="flex justify-between items-center p-4 border-b border-gray-200"
+                    >
+                        <!-- Logo in Search -->
+                        <img src="assets/img/logo.png" class="h-7" alt="" />
+
+                        <!-- Close Button -->
+                        <button
+                            id="closeSearch"
+                            class="text-[#6B61A0] focus:outline-none"
+                        >
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7 21L20.93 7M21 21L7.07 7"
+                                    stroke="#6B61A0"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div class="p-4">
+                        <div class="relative">
+                            <input
+                                type="text"
+                                placeholder="พิมพ์คำค้นหา..."
+                                class="w-full border border-gray-300 rounded-full py-3 px-5 pr-12 focus:outline-none focus:ring-2 focus:ring-[#6B61A0] focus:border-transparent"
+                            />
+                            <button
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#6B61A0]"
+                            >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 28 28"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M21 21L17.4584 17.4521L21 21ZM19.4211 12.7105C19.4211 14.4903 18.7141 16.1971 17.4556 17.4556C16.1971 18.7141 14.4903 19.4211 12.7105 19.4211C10.9308 19.4211 9.22394 18.7141 7.96547 17.4556C6.707 16.1971 6 14.4903 6 12.7105C6 10.9308 6.707 9.22394 7.96547 7.96547C9.22394 6.707 10.9308 6 12.7105 6C14.4903 6 16.1971 6.707 17.4556 7.96547C18.7141 9.22394 19.4211 10.9308 19.4211 12.7105V12.7105Z"
+                                        stroke="#6B61A0"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Hero Section -->
         <section
             id="slider-container"
@@ -465,6 +544,7 @@
                     <!-- Search Bar -->
                     <button
                         class="ml-auto bg-transparent border border-white rounded-[40px] text-white text-sm hidden lg:grid items-center w-[100px]"
+                        id="btnSearch"
                     >
                         <div class="flex items-center px-4 py-2">
                             <svg
