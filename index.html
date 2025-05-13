@@ -136,14 +136,14 @@
             <!-- Menu Items -->
             <div class="px-10 py-2">
                 <ul class="flex flex-col gap-y-8 mt-10">
-                    <!-- ระบบงาน (with submenu) -->
+                    <!-- บริการของเรา (with submenu) -->
                     <li class="">
                         <div
                             class="flex justify-between items-center cursor-pointer"
                             data-submenu="mobileSubmenu1"
                         >
                             <span class="text-[#6B61A0] text-2xl font-semibold"
-                                >ระบบงาน</span
+                                >บริการของเรา</span
                             >
                             <svg
                                 width="24"
@@ -184,21 +184,21 @@
                         </div>
                     </li>
 
-                    <!-- ข่าวสาร/สัมมนา -->
+                    <!-- ประชาสัมพันธ์ -->
                     <li>
                         <span class="text-[#6B61A0] text-2xl font-semibold"
-                            >ข่าวสาร/สัมมนา</span
+                            >ประชาสัมพันธ์</span
                         >
                     </li>
 
-                    <!-- กฎระเบียบ/เอกสาร (with submenu) -->
+                    <!-- ดาวโหลดเอกสาร (with submenu) -->
                     <li class="">
                         <div
                             class="flex justify-between items-center cursor-pointer"
                             data-submenu="mobileSubmenu2"
                         >
                             <span class="text-[#6B61A0] text-2xl font-semibold"
-                                >กฎระเบียบ/เอกสาร</span
+                                >ดาวโหลดเอกสาร</span
                             >
                             <svg
                                 width="24"
@@ -224,31 +224,61 @@
                             <a
                                 href="#"
                                 class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
-                                >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
-                            >
+                                >กฎระเบียบ/เอกสาร
+                            </a>
                             <a
                                 href="#"
                                 class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
-                                >ส่วนตลาดขนส่งสินค้า</a
-                            >
-                            <a
-                                href="#"
-                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
-                                >ส่วนประกอบการขนส่งสินค้า</a
-                            >
-                            <a
-                                href="#"
-                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
-                                >ผลการศึกษา</a
-                            >
+                                >กฎระเบียบ/เอกสาร
+                            </a>
                         </div>
                     </li>
 
-                    <!-- หน่วยงาน -->
-                    <li>
-                        <span class="text-[#6B61A0] text-2xl font-semibold"
-                            >หน่วยงาน</span
+                    <!-- เกี่ยวกับเรา -->
+                    <li class="">
+                        <div
+                            class="flex justify-between items-center cursor-pointer"
+                            data-submenu="mobileSubmenu3"
                         >
+                            <span class="text-[#6B61A0] text-2xl font-semibold"
+                                >เกี่ยวกับเรา</span
+                            >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6 9L12 15L18 9"
+                                    stroke="#6B61A0"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div
+                            id="mobileSubmenu3"
+                            class="max-h-0 overflow-hidden pl-4"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                            </a>
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนสถานีขนส่งสินค้า
+                            </a> <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนประกอบการขนส่งสินค้า
+                            </a>
+                        </div>
                     </li>
 
                     <!-- ติดต่อ/สอบถาม -->
@@ -520,23 +550,33 @@
                                 <div
                                     class="text-[#6B61A0] flex flex-col text-xs gap-y-2"
                                 >
+                                    <a href="#">กฎระเบียบ/เอกสาร</a>
+                                    <a href="#">ผลการศึกษา</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- เกี่ยวกับเรา -->
+
+                        <div class="relative group">
+                            <div class="inline-block">
+                                <a href="#" class="hover:text-yellow-400 block"
+                                    >เกียวกับเรา</a
+                                >
+                            </div>
+                            <div
+                                class="absolute right-0 mt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 bg-white z-50 rounded-lg shadow-md p-3 w-[215px]"
+                            >
+                                <div
+                                    class="text-[#6B61A0] flex flex-col text-xs gap-y-2"
+                                >
                                     <a href="#"
                                         >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
                                     >
                                     <a href="#">ส่วนตลาดขนส่งสินค้า</a>
                                     <a href="#">ส่วนประกอบการขนส่งสินค้า</a>
-                                    <a href="#">ผลการศึกษา</a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- เกี่ยวกับเรา -->
-                        <div class="relative group">
-                            <a href="#" class="hover:text-yellow-400 block"
-                                >เกี่ยวกับเรา</a
-                            >
-                        </div>
-
                         <!-- ติดต่อ/สอบถาม -->
                         <div class="relative group">
                             <a href="#" class="hover:text-yellow-400 block"
@@ -1208,7 +1248,7 @@
                         รายงานผลการศึกษา
                     </h1>
                     <button
-                        class="custom-button text-white font-medium py-3 px-8 rounded-full"
+                        class="custom-button text-white font-medium py-3 px-8 rounded-full hidden xl:block"
                     >
                         ดูเพิ่มเติม
                     </button>
@@ -1319,7 +1359,11 @@
                             />
                         </svg>
                     </button>
-
+                    <button
+                        class="custom-button text-white font-medium py-3 px-8 rounded-full block xl:hidden mx-auto mt-10"
+                    >
+                        ดูเพิ่มเติม
+                    </button>
                     <!-- Indicator Dots -->
                     <div
                         class="flex justify-center bg-[#FFFBEE] rounded-full max-w-32 mx-auto mt-10"
