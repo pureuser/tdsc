@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     submenu.style.maxHeight === '0px' ||
                     submenu.style.maxHeight === ''
                 ) {
-                    submenu.style.maxHeight = '200px'
+                    submenu.style.maxHeight = '400px'
                     arrow.style.transform = 'rotate(180deg)'
                 } else {
                     submenu.style.maxHeight = '0px'
