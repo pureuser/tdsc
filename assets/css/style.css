@@ -240,3 +240,6 @@ body {
     font-weight: 600;
     height: 57px;
 }
+.card-button:hover {
+    background-color: #fada54;
+}
