@@ -1488,7 +1488,7 @@
         </section>
         <footer class="bg-white pt-20">
             <div
-                class="bg-[#F7F7F7] xl:py-20 xl:px-32 py-10 w-full relative xl:h-[600px] h-auto"
+                class="bg-[#F7F7F7] xl:py-20 xl:px-32 py-10 w-full relative  h-auto"
             >
                 <div class="flex flex-col">
                     <div
@@ -1580,7 +1580,71 @@
                                         class="text-[#6B61A0] text-xs tracking-[-0.2px] gap-y-2 flex flex-col list-disc"
                                     >
                                         <li>
-                                            <a href="#">บริการของเรา</a>
+                                             <button
+                                        class="w-full  flex justify-between items-center tdsc-secondary  gap-x-2"
+                                        onclick="toggleDropdown('menu4')"
+                                    >
+                                        <span
+                                            class=" "
+                                            >บริการของเรา</span
+                                        >
+                                        <svg
+                                            id="arrow3"
+                                            class="w-4 h-4 transform transition-transform duration-200"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        id="menu4"
+                                        class="hidden  py-2 px-4 rounded-lg mb-2"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >Q Mark</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >Q Cold Chain</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >DG Transport</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >DLT E-Transport License</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >Freight Cost and Statistics</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >Foreign Operators</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >Trip Planner</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >AEC Routes</a
+                                        >
+                                    </div>
                                         </li>
                                         
                                         <li>
