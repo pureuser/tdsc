@@ -243,3 +243,66 @@ body {
 .card-button:hover {
     background-color: #fada54;
 }
+.language-switcher {
+    position: relative;
+    display: inline-block;
+}
+
+.selector-btn {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.selector-btn img {
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+.selector-btn span {
+    margin-right: 6px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.selector-btn .arrow {
+    font-size: 10px;
+    color: #fff;
+}
+
+.dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    min-width: 100%;
+    z-index: 999;
+}
+
+.dropdown .option {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown .option:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown .option img {
+    width: 20px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
