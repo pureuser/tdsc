@@ -1,4 +1,4 @@
-function toggleDropdown() {
+function toggleDropdownswitch() {
     document.getElementById('lang-dropdown').style.display =
         document.getElementById('lang-dropdown').style.display === 'block'
             ? 'none'
