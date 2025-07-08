@@ -306,3 +306,58 @@ body {
     margin-right: 8px;
     border-radius: 2px;
 }
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background: white;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.lang-option:hover {
+    opacity: 0.7;
+}
+
+.flag {
+    width: 24px;
+    height: 16px;
+    border-radius: 2px;
+    background: linear-gradient(
+        to bottom,
+        #ed1c24 0%,
+        #ed1c24 33%,
+        #fff 33%,
+        #fff 66%,
+        #ed1c24 66%
+    );
+}
+
+.flag.en {
+    background: linear-gradient(
+            135deg,
+            #012169 0%,
+            #012169 50%,
+            #fff 50%,
+            #fff 100%
+        ),
+        linear-gradient(45deg, #fff 0%, #fff 50%, #c8102e 50%, #c8102e 100%);
+}
+
+.lang-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+.lang-option.active .lang-text {
+    color: #ffd700;
+    font-weight: 600;
+}

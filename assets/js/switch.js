@@ -32,3 +32,26 @@ document.addEventListener('click', function (event) {
         dropdown.style.display = 'none'
     }
 })
+function switchLanguage(lang) {
+    console.log('Language switched to:', lang)
+
+    // Remove active class from all language options
+    const langOptions = document.querySelectorAll('.lang-option')
+    langOptions.forEach((option) => {
+        option.classList.remove('active')
+    })
+
+    // Add active class to clicked language option
+    event.currentTarget.classList.add('active')
+
+    // Add visual feedback
+    langOptions.forEach((option) => {
+        option.style.opacity = '0.7'
+    })
+
+    setTimeout(() => {
+        langOptions.forEach((option) => {
+            option.style.opacity = '1'
+        })
+    }, 200)
+}
