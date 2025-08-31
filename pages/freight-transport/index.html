@@ -15,6 +15,8 @@
         <!-- ใช้ไฟล์ slide.js ที่แยกออกมาต่างหาก -->
         <script src="../../assets/js/slide.js"></script>
         <script src="../../assets/js/read-more.js"></script>
+        <script src="../../assets/js/carousel.js"></script>
+
 
         <script src="../../assets/js/menu.js"></script>
         <script src="../../assets/js/switch.js"></script>
@@ -333,29 +335,34 @@
                 <div class="absolute inset-0 z-20 flex">
                     <div class="xl:w-[60%] w-2/3"></div>
                     <div
-                        class="xl:w-[40%] w-[90%] flex flex-col justify-center pl-12 pr-16 xl:mt-0 mt-52"
+                        class="xl:w-[40%] w-[90%] flex flex-col justify-center pl-12 pr-16 xl:mt-0 mt-32"
                     >
                         <div class="flex flex-col gap-y-2">
                             <div class="flex gap-x-2 items-center">
                                 <img
                                     src="../../assets/img/sd.png"
                                     alt="logo กรมการขนส่งทางบก"
+                                    class="xl:w-auto w-[32px] aspect-square"
                                 />
                                 <div class="flex flex-col">
                                     <span
-                                        class="text-white font-bold text-[32px]"
+                                        class="text-white font-bold xl:text-[32px] text-[6px]"
                                         >ส่วนประกอบการขนส่งสินค้า</span
                                     >
                                     <span
-                                        class="text-white font-bold text-[32px]"
+                                        class="text-white font-bold xl:text-[32px] text-[6px]"
                                         >สำนักการขนส่งสินค้า</span
                                     >
                                 </div>
                             </div>
-                            <p class="text-white font-semibold text-2xl">
+                            <p
+                                class="text-white font-semibold xl:text-2xl text-[8px]"
+                            >
                                 พันธกิจ ส่วนประกอบการขนส่งสินค้า
                             </p>
-                            <p class="text-[#CDCDCD] text-xl xl:w-[421px]">
+                            <p
+                                class="text-[#CDCDCD] xl:text-xl text-[6px] xl:w-[421px]"
+                            >
                                 กำกับ ดูแล และควบคุมการประกอบการขนส่งสินค้า
                                 ให้เป็นไปตามกฎหมายและมาตรฐานที่กำหนด จัดทำ
                                 กฎระเบียบที่เกี่ยวข้อง ดูแลการขนส่งสินค้าระหว่าง
@@ -953,8 +960,8 @@
             <h1 class="text-[44px] text-[#FB9869] font-bold text-center">
                 DLT E-Transport License
             </h1>
-            <div class="flex gap-x-20">
-                <div class="flex flex-col items-center w-[570px] gap-y-5">
+            <div class="flex gap-x-20 xl:flex-row flex-col">
+                <div class="flex flex-col items-center xl:w-[570px] gap-y-5">
                     <div
                         class="bg-white rounded-[40px] p-5 shadow-2xl flex-col flex gap-y-5"
                     >
@@ -1045,7 +1052,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex flex-col items-center w-[570px] gap-y-5">
+                <div class="flex flex-col items-center xl:w-[570px] gap-y-5">
                     <div
                         class="bg-white rounded-[40px] p-5 shadow-2xl flex-col flex gap-y-5"
                     >
@@ -1183,12 +1190,12 @@
                     class="flex flex-col bg-[#F0EFF6] p-5 rounded-[30px] gap-2"
                 >
                     <h1
-                        class="text-[32px] text-[#212121] font-medium w-[529.6950073242188px]"
+                        class="text-[32px] text-[#212121] font-medium xl:w-[529.6950073242188px]"
                     >
                         กรอบความตกลง GMS Cross-Border Transport Agreement (GMS
                         CBTA)
                     </h1>
-                    <div class="flex gap-x-2">
+                    <div class="flex gap-2 flex-wrap">
                         <img
                             src="../../assets//img/tran-f/flags/thailand.png"
                             alt="thailand"
@@ -1263,7 +1270,7 @@
                 <div
                     class="flex flex-col bg-[#F0EFF6] p-5 rounded-[30px] gap-2"
                 >
-                    <div class="flex gap-x-2">
+                    <div class="flex gap-2  flex-wrap">
                         <img
                             src="../../assets//img/tran-f/flags/asean.png"
                             alt="asean"
@@ -1322,7 +1329,7 @@
                         />
                     </div>
                     <h1
-                        class="text-[32px] text-[#212121] font-medium w-[529.6950073242188px]"
+                        class="text-[32px] text-[#212121] font-medium xl:w-[529.6950073242188px]"
                     >
                         กรอบความตกลง ASEAN
                     </h1>
@@ -1370,7 +1377,7 @@
                 <div
                     class="flex flex-col bg-[#F0EFF6] p-5 rounded-[30px] gap-2"
                 >
-                    <div class="flex gap-x-2">
+                    <div class="flex gap-x-2 ">
                         <img
                             src="../../assets//img/tran-f/flags/thailand.png"
                             alt="thailand"
@@ -1383,7 +1390,7 @@
                         />
                     </div>
                     <h1
-                        class="text-[32px] text-[#212121] font-medium w-[529.6950073242188px]"
+                        class="text-[32px] text-[#212121] font-medium xl:w-[529.6950073242188px]"
                     >
                         กรอบความตกลง ไทย - สปป. ลาว
                     </h1>
@@ -1625,8 +1632,8 @@
                                 >
                                     0-2271-8491
                                 </p>
-                            </div> 
-                             <div class="flex gap-x-2 items-center">
+                            </div>
+                            <div class="flex gap-x-2 items-center">
                                 <img
                                     src="../../assets/img/tran-f/icon/Message.png"
                                     alt=""
@@ -1636,7 +1643,7 @@
                                 >
                                     70transport@dlt.mail.go.th
                                 </p>
-                            </div> 
+                            </div>
                             <div class="flex gap-x-2 items-start">
                                 <img
                                     src="../../assets/img/tran-f/icon/tabler_world-www.png"
@@ -1644,15 +1651,15 @@
                                 />
                                 <div class="flex flex-col gap-y-1">
                                     <p
-                                    class="text-[#6B61A0] text-xs w-[160px] font-medium"
-                                >
-                                    https://www.thaitruckcenter.com/tdsc/...(ตัวย่อสปค.)
-                                </p> 
-                                <p
-                                    class="text-[#6B61A0] text-xs w-[160px] font-medium"
-                                >
-                                    https://elt.dlt.go.th
-                                </p>
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        https://www.thaitruckcenter.com/tdsc/...(ตัวย่อสปค.)
+                                    </p>
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        https://elt.dlt.go.th
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1767,7 +1774,6 @@
                                                 <span class=" "
                                                     >บริการของเรา</span
                                                 >
-                                              
                                             </button>
                                             <div
                                                 id="menu4"
