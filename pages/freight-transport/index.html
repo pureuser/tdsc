@@ -17,7 +17,6 @@
         <script src="../../assets/js/read-more.js"></script>
         <script src="../../assets/js/carousel.js"></script>
 
-
         <script src="../../assets/js/menu.js"></script>
         <script src="../../assets/js/switch.js"></script>
     </head>
@@ -705,7 +704,7 @@
             </div>
         </section>
         <section
-            class="flex flex-col bg-[##F0EFF6] xl:h-[80vh] h-auto xl:mt-0 mt-0"
+            class="flex flex-col bg-[##F0EFF6] xl:h-[80vh] h-auto xl:mt-0 mt-0 xl:mb-0 mb-6"
         >
             <div class="w-full">
                 <!-- Header -->
@@ -948,7 +947,7 @@
             </div>
             <div class="flex justify-center w-[200px] mx-auto mb-0">
                 <button
-                    class="custom-button text-white font-medium py-3 px-8 rounded-full"
+                    class="custom-button text-white font-medium py-3 px-8 rounded-full w-full xl:w-auto"
                 >
                     ดูเพิ่มเติม
                 </button>
@@ -957,7 +956,9 @@
         <section
             class="xl:h-auto bg-[url('../../assets/img/tran-f/dlt-bg.jpg')] flex gap-x-8 flex-col py-5 px-5 bg-cover gap-y-8 xl:gap-y-10 xl:px-[124px] xl:py-16 items-center"
         >
-            <h1 class="text-[44px] text-[#FB9869] font-bold text-center">
+            <h1
+                class="xl:text-[44px] text-[32px] text-[#FB9869] font-bold text-center"
+            >
                 DLT E-Transport License
             </h1>
             <div class="flex gap-x-20 xl:flex-row flex-col gap-y-5">
@@ -968,15 +969,23 @@
                         <img
                             src="../../assets//img/tran-f/dlt.png"
                             alt=""
-                            class="aspect-square w-[175px]"
+                            class="aspect-square xl:w-[175px] w-20"
                         />
-                        <p class="text-2xl">
+                        <p
+                            class="text-2xl h-[90px] xl:h-auto line-clamp-3 xl:line-clamp-none"
+                        >
                             ระบบงานใบอนุญาตประกอบการขนส่งอิเล็กทรอนิกส์
                             ด้วยรถบรรทุก โดยกรมการขนส่งทางบก ช่วยให้ผู้ประกอบการ
                             สามารถยื่นคำขอ ตรวจสอบสถานะ และรับใบอนุญาตได้สะดวก
                             รวดเร็ว และปลอดภัยผ่านระบบออนไลน์ รองรับการดำเนินงาน
                             แบบไร้กระดาษและเชื่อมโยงข้อมูลกับหน่วยงาน
                             ที่เกี่ยวข้อง อย่างมีประสิทธิภาพ
+                        </p>
+                        <p
+                            class="xl:hidden block text-[#FB9869] underline cursor-pointer"
+                            id="read-more-1"
+                        >
+                            READ MORE
                         </p>
                     </div>
                     <a
@@ -990,7 +999,7 @@
                         />
                         <div class="flex flex-col justify-center">
                             <h1
-                                class="xl:text-2xl text-xl font-semibold text-[#6B61A0]"
+                                class="xl:text-2xl text-base font-semibold text-[#6B61A0]"
                             >
                                 ยื่นคำขอผ่านระบบ DLT ETL
                             </h1>
@@ -1035,14 +1044,14 @@
                     </a>
                     <a
                         href="#"
-                        class="cursor-pointer border-l-8 rounded-[20px] p-8 border-[#FB9869] bg-white flex gap-5 items-center shadow w-full"
+                        class="cursor-pointer border-l-8 rounded-[20px] p-8 border-[#FB9869] bg-white flex gap-5 items-start shadow w-full"
                     >
                         <img
                             src="../../assets/img/tran-f/tsm.png"
                             alt="dlt"
                             class="xl:h-[100px] h-[45px] aspect-square"
                         />
-                        <div class="flex flex-col justify-center">
+                        <div class="flex flex-col">
                             <h1
                                 class="xl:text-2xl text-xl font-semibold text-[#6B61A0]"
                             >
@@ -1054,17 +1063,19 @@
                 </div>
                 <div class="flex flex-col items-center xl:w-[570px] gap-y-5">
                     <div
-                        class="bg-white rounded-[40px] p-5 shadow-2xl flex-col flex gap-y-5 w-full"
+                        class="bg-white rounded-[40px] p-5 shadow-2xl flex-col flex xl:gap-y-5 gap-y-1 w-full"
                     >
-                        <h1 class="text-[44px] text-[#FB9869] font-bold">
+                        <h1
+                            class="xl:text-[44px] text-[28px] text-[#FB9869] font-bold"
+                        >
                             ขั้นตอนการใช้งาน
                         </h1>
-                        <p class="text-2xl">
+                        <p class="xl:text-2xl text-base">
                             ระบบงานใบอนุญาตประกอบการขนส่งอิเล็กทรอนิกส์ด้วยรถบรรทุก
                         </p>
                     </div>
                     <div
-                        class="bg-white rounded-[40px] p-5 shadow-2xl flex gap-y-5 items-center gap-x-5 w-full"
+                        class="bg-white rounded-[40px] p-5 shadow-2xl flex xl:gap-y-5 gap-y-1 items-center gap-x-5 w-full"
                     >
                         <img
                             src="../../assets/img/tran-f/icon/tabler_user-plus.png"
@@ -1228,7 +1239,9 @@
                             class="h-11 aspect-square"
                         />
                     </div>
-                    <p class="text-xl text-[#383838]">
+                    <p
+                        class="text-xl text-[#383838] h-[90px] xl:h-auto line-clamp-3 xl:line-clamp-none"
+                    >
                         กรอบความร่วมมือระหว่าง 6
                         ประเทศสมาชิกในอนุภูมิภาคลุ่มแม่น้ำโขง ได้แก่
                         ราชอาณาจักรไทย ราชอาณาจักรกัมพูชา สาธารณรัฐประชาชนจีน
@@ -1238,6 +1251,12 @@
                         วัตถุประสงค์หลักเพื่ออำนวยความสะดวกและส่งเสริมการขนส่งสินค้าและผู้โดยสาร
                         ระหว่างประเทศสมาชิกให้เป็นไปอย่างเสรี มีประสิทธิภาพ
                         และไร้รอยต่อ
+                    </p>
+                    <p
+                        class="xl:hidden block text-[#FB9869] underline cursor-pointer"
+                        id="read-more-2"
+                    >
+                        READ MORE
                     </p>
                 </div>
                 <div class="flex flex-col py-8 px-5 items-center gap-y-5">
@@ -1270,7 +1289,7 @@
                 <div
                     class="flex flex-col bg-[#F0EFF6] p-5 rounded-[30px] gap-2"
                 >
-                    <div class="flex gap-2  flex-wrap">
+                    <div class="flex gap-2 flex-wrap">
                         <img
                             src="../../assets//img/tran-f/flags/asean.png"
                             alt="asean"
@@ -1333,13 +1352,21 @@
                     >
                         กรอบความตกลง ASEAN
                     </h1>
-                    <p class="text-xl text-[#383838]">
+                    <p
+                        class="text-xl text-[#383838] h-[90px] xl:h-auto line-clamp-3 xl:line-clamp-none"
+                    >
                         ความตกลงอาเซียนว่าด้วยการอำนวยความสะดวกในการขนส่งสินค้าผ่านแดน
                         (ASEAN Framework Agreement on the Facilitation of Goods
                         in Transit - AFAFGIT)
                         ความตกลงอาเซียนว่าด้วยการอำนวยความสะดวกในการขนส่งข้ามแดน
                         (ASEAN Framework Agreement on the Facilitation of
                         Inter-State Transport - AFAFIST)
+                    </p>
+                    <p
+                        class="xl:hidden block text-[#FB9869] underline cursor-pointer"
+                        id="read-more-3"
+                    >
+                        READ MORE
                     </p>
                     <button
                         class="custom-button text-white font-medium py-3 px-8 rounded-full !w-[192px]"
@@ -1377,7 +1404,7 @@
                 <div
                     class="flex flex-col bg-[#F0EFF6] p-5 rounded-[30px] gap-2"
                 >
-                    <div class="flex gap-x-2 ">
+                    <div class="flex gap-x-2">
                         <img
                             src="../../assets//img/tran-f/flags/thailand.png"
                             alt="thailand"
@@ -1394,7 +1421,9 @@
                     >
                         กรอบความตกลง ไทย - สปป. ลาว
                     </h1>
-                    <p class="text-xl text-[#383838]">
+                    <p
+                        class="text-xl text-[#383838] h-[90px] xl:h-auto line-clamp-3 xl:line-clamp-none"
+                    >
                         กรอบความร่วมมือทวิภาคีที่มีความสำคัญอย่างยิ่งต่อการส่งเสริมความสัมพันธ์
                         การค้า
                         การลงทุนและการไปมาหาสู่กันระหว่างสองประเทศวามตกลงฉบับนี้มีวัตถุประสงค์
@@ -1402,6 +1431,13 @@
                         และผู้โดยสารทางถนนข้ามพรมแดนเป็นไปอย่างเป็นระบบ ปลอดภัย
                         และมีประสิทธิภาพ
                     </p>
+                    <p
+                        class="xl:hidden block text-[#FB9869] underline cursor-pointer"
+                        id="read-more-4"
+                    >
+                        READ MORE
+                    </p>
+
                     <button
                         class="custom-button text-white font-medium py-3 px-8 rounded-full !w-[192px]"
                     >
@@ -1441,10 +1477,14 @@
             class="xl:h-auto bg-[url('../../assets/img/tran-f/mou-bg.jpg')] flex gap-x-8 flex-col py-5 px-5 bg-cover gap-y-8 xl:gap-y-10 xl:px-[124px] xl:py-16 items-center"
         >
             <div class="flex flex-col">
-                <h1 class="text-[44px] text-white font-bold text-center">
+                <h1
+                    class="xl:text-[44px] text-[32px] text-white font-bold text-center"
+                >
                     จำนวนโควตาในแต่ละกรอบความตกลง
                 </h1>
-                <h1 class="text-[44px] text-white font-bold text-center">
+                <h1
+                    class="xl:text-[44px] text-[32px] text-white font-bold text-center"
+                >
                     ด้านการขนส่งทางถนนระหว่างประเทศ
                 </h1>
             </div>
@@ -1467,7 +1507,7 @@
                             alt="Vietnam Flag"
                         />
                     </div>
-                    <p class="text-xl font-semibold w-[346.6666564941406px]">
+                    <p class="text-xl font-semibold xl:w-[346.6666564941406px]">
                         GMS CBTA การขนส่งทางถนน ระหว่างไทย-ลาว-เวียดนาม
                     </p>
                     <p class="text-base text-[#3A3A3A]">จำนวนผู้ประกอบการ</p>
@@ -1491,7 +1531,7 @@
                             alt="Cambodia Flag"
                         />
                     </div>
-                    <p class="text-xl font-semibold w-[346.6666564941406px]">
+                    <p class="text-xl font-semibold xl:w-[346.6666564941406px]">
                         GMS CBTA การขนส่งทางถนน ระหว่างไทย-กัมพูชา
                     </p>
                     <p class="text-base text-[#3A3A3A]">จำนวนผู้ประกอบการ</p>
@@ -1505,7 +1545,7 @@
                 <div
                     class="bg-white rounded-[20px] border p-5 shadow-[20px] flex flex-col gap-y-2 w-full"
                 >
-                    <p class="text-xl font-semibold w-[346.6666564941406px]">
+                    <p class="text-xl font-semibold xl:w-[346.6666564941406px]">
                         GMS CBTA การขนส่งทางถนน<br />
                         ระหว่างประเทศสมาชิก<br />
                         ในอนุภูมิภาคลุ่มแม่น้ำโขง
@@ -1570,37 +1610,41 @@
                 </div>
             </div>
         </section>
-        <section class="relative overflow-hidden w-3/5 my-[60px]">
+        <section
+            class="relative xl:overflow-hidden xl:w-3/5 w-full xl:my-[60px]"
+        >
             <!-- รูปพื้นหลัง -->
             <div class="absolute inset-0 bg-cover bg-center"></div>
 
             <!-- Gradient overlay -->
             <div
-                class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/90 border rounded-r-full"
+                class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/90 border xl:rounded-r-full"
             ></div>
 
             <!-- เนื้อหา -->
-            <div class="relative z- xl:p-20 py-[64px] flex gap-x-9">
-                <div class="">
+            <div
+                class="relative z- xl:p-20 py-[64px] flex gap-x-9 xl:flex-row flex-col px-5 gap-5"
+            >
+                <div class="xl:order-0 order-1">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.336532379754!2d100.55117836023845!3d13.79857170910574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d4e46d6bfdb%3A0x9057e3517d1071c2!2z4Liq4Liz4LiZ4Lix4LiB4LiC4LiZ4Liq4LmI4LiH4LiB4Lij4Li44LiH4LmA4LiX4Lie4Lih4Lir4Liy4LiZ4LiE4Lij4Lie4Li34LmJ4LiZ4LiX4Li14LmIIDU!5e0!3m2!1sth!2sth!4v1756653582649!5m2!1sth!2sth"
-                        width="600"
-                        height="450"
-                        class="rounded-[40px] border"
+                        class="rounded-[40px] border xl:w-[600px] xl:h-[450px] w-full h-[300px] border-white"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
-                <div class="flex flex-col gap-y-5">
-                    <h1 class="font-bold text-[44px] text-white">
+                <div class="flex flex-col gap-y-5 xl:order-1 order-0">
+                    <h1
+                        class="font-bold xl:text-[44px] text-2xl text-white xl:text-left text-center"
+                    >
                         ข้อมูลติดต่อ
                     </h1>
                     <div
-                        class="bg-white rounded-[20px] border p-5 shadow-[20px] flex flex-col gap-y-2 w-[428px]"
+                        class="bg-white rounded-[20px] border p-5 shadow-[20px] flex flex-col gap-y-2 xl:w-[428px]"
                     >
                         <h1 class="font-bold text-2xl text-[#6B61A0]">
-                            ส่วนประกอบการขนส่งสินค้า
+                            กลุ่มพัฒนาและส่งเสริม การขนส่งสินค้า
                         </h1>
                         <p class="text-[#6B61A0] text-base">
                             สำนักการขนส่งสินค้า (อาคาร 4 ชั้น 6)
