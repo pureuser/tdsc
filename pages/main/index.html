@@ -606,129 +606,236 @@
 
             <!-- Bullet Navigation will be added by JavaScript -->
         </section>
-        <!-- ====== SECTION A: พื้นหลังม่วง + หัวข้อ ====== -->
-        <section class="relative w-full">
-            <!-- BG image -->
-            <div
-                class="absolute inset-0 bg-cover bg-center xl:h-[400px]"
-                style="
-                    background-image: url('../../assets/img/main/service.jpg');
-                "
-            ></div>
-            <!-- Gradient overlay -->
-            <div
-                class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/70 xl:h-[400px]"
-            ></div>
+        <section class="relative w-full overflow-visible">
+            <!-- ===== Mobile/Tablet (<= lg): แสดงเสมอ ยกเว้น xl ขึ้นไป ===== -->
+            <div class="relative block xl:hidden">
+                <!-- BG + Gradient ครอบตามเนื้อหา -->
+                <div class="absolute inset-0">
+                    <div
+                        class="absolute inset-0 bg-cover bg-center"
+                        style="
+                            background-image: url('../../assets/img/main/service.jpg');
+                        "
+                    ></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/70"
+                    ></div>
+                </div>
 
-            <!-- Content (หัวข้อ + เว้นที่ให้การ์ดลอยลงมา) -->
-            <div
-                class="relative z-10 max-w-7xl mx-auto px-5 xl:px-0 pt-12 xl:pt-16 pb-28 xl:pb-36"
-            >
-                <h2
-                    class="text-[#FB9869] xl:text-[44px] text-[32px] font-bold text-center"
-                >
-                    บริการของเรา
-                </h2>
+                <!-- เนื้อหา Mobile/Tablet -->
+                <div class="relative z-10 max-w-xl mx-auto px-5 pt-6 pb-28">
+                    <h2
+                        class="text-[#FB9869] text-[28px] font-bold text-center mb-5"
+                    >
+                        บริการของเรา
+                    </h2>
+
+                    <!-- การ์ด 6 ใบ (2 คอลัมน์) -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <!-- การ์ด 1 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                Q Mark
+                            </h3>
+                        </div>
+                        <!-- การ์ด 2 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                Q Cold Chain
+                            </h3>
+                        </div>
+                        <!-- การ์ด 3 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                Dangerous Goods Transport
+                            </h3>
+                        </div>
+                        <!-- การ์ด 4 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                ข้อมูลสถิติ…ต้นทุนการขนส่งสินค้า
+                            </h3>
+                        </div>
+                        <!-- การ์ด 5 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ
+                            </h3>
+                        </div>
+                        <!-- การ์ด 6 -->
+                        <div
+                            class="bg-white shadow-xl rounded-[24px] p-4 flex flex-col items-center gap-y-3"
+                        >
+                            <div
+                                class="h-[72px] w-[72px] bg-gray-100 rounded-2xl"
+                            ></div>
+                            <h3
+                                class="text-[#0BB9D7] text-sm font-semibold text-center leading-snug"
+                            >
+                                ค้นหาเส้นทางการขนส่งสินค้า
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Mascot: ล่างซ้ายในพื้นหลังม่วง -->
+                    <img
+                        src="../../assets/img/main/mascot.png"
+                        alt="Mascot"
+                        class="absolute right-5 bottom-0 translate-y-[45%] h-28 object-contain drop-shadow-2xl pointer-events-none select-none"
+                    />
+                </div>
             </div>
-        </section>
 
-        <!-- ====== ROWS OF CARDS: ลอยทับ/ทะลุลงมา ====== -->
-        <div class="relative z-20 -mt-24 xl:-mt-32">
-            <div class="max-w-7xl mx-auto px-5 xl:px-0 relative">
-                <!-- Mascot -->
-                <img
-                    src="../../assets/img/main/mascot.png"
-                    alt="Mascot"
-                    class="hidden md:block absolute -left-5 xl:-left-4 -top-10 xl:top-14 h-44 xl:h-72 object-contain drop-shadow-2xl pointer-events-none select-none"
-                />
+            <!-- ===== Desktop (>= xl): ใช้เลย์เอาต์แยกบล็อก + ลอยทับ ===== -->
+            <div class="relative hidden xl:block">
+                <!-- Hero ม่วง -->
+                <div class="relative h-[440px]">
+                    <div
+                        class="absolute inset-0 bg-cover bg-center"
+                        style="
+                            background-image: url('../../assets/img/main/service.jpg');
+                        "
+                    ></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/70"
+                    ></div>
 
-                <!-- Card Grid -->
-                <div
-                    class="grid grid-cols-2  xl:grid-cols-3 gap-3 xl:gap-5 md:pl-24 xl:pl-40"
-                >
-                    <!-- การ์ด 1 -->
                     <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                        class="relative z-10 max-w-7xl mx-auto px-5 xl:px-0 h-full flex items-start justify-center pt-16"
                     >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        <h2
+                            class="text-[#FB9869] text-[44px] font-bold text-center"
                         >
-                            Q Mark
-                        </h3>
+                            บริการของเรา
+                        </h2>
                     </div>
-                    <!-- การ์ด 2 -->
-                    <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
-                    >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
-                        >
-                            Q Cold Chain
-                        </h3>
-                    </div>
-                    <!-- การ์ด 3 -->
-                    <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
-                    >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
-                        >
-                            Dangerous Goods Transport
-                        </h3>
-                    </div>
-                    <!-- การ์ด 4 -->
-                    <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
-                    >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
-                        >
-                            ข้อมูลสถิติ…ต้นทุนการขนส่งสินค้า
-                        </h3>
-                    </div>
-                    <!-- การ์ด 5 -->
-                    <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
-                    >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
-                        >
-                            เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ
-                        </h3>
-                    </div>
-                    <!-- การ์ด 6 -->
-                    <div
-                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
-                    >
-                        <div
-                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
-                        ></div>
-                        <h3
-                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
-                        >
-                            ค้นหาเส้นทางการขนส่งสินค้า
-                        </h3>
+                </div>
+
+                <!-- การ์ดลอยทับ -->
+                <div class="relative z-20 -mt-64">
+                    <div class="max-w-7xl mx-auto px-5 xl:px-0 relative">
+                        <!-- Mascot ซ้ายบน -->
+                        <img
+                            src="../../assets/img/main/mascot.png"
+                            alt="Mascot"
+                            class="absolute -left-4 top-16 h-72 object-contain drop-shadow-2xl pointer-events-none select-none"
+                        />
+
+                        <!-- กริดการ์ด 3 คอลัมน์ 2 แถว -->
+                        <div class="grid grid-cols-3 gap-5 pl-40">
+                            <!-- วางการ์ด 1–6 (ขนาดใหญ่ขึ้นได้) -->
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    Q Mark
+                                </h3>
+                            </div>
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    Q Cold Chain
+                                </h3>
+                            </div>
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    Dangerous Goods Transport
+                                </h3>
+                            </div>
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    ข้อมูลสถิติ…ต้นทุนการขนส่งสินค้า
+                                </h3>
+                            </div>
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ
+                                </h3>
+                            </div>
+                            <div
+                                class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                            >
+                                <div
+                                    class="h-[110px] w-[110px] bg-gray-100 rounded-2xl"
+                                ></div>
+                                <h3
+                                    class="text-[#0BB9D7] text-[22px] font-semibold text-center leading-snug"
+                                >
+                                    ค้นหาเส้นทางการขนส่งสินค้า
+                                </h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-      
+        </section>
 
         <section
             class="flex flex-col bg-[##F0EFF6] xl:h-[80vh] h-auto xl:mt-0 mt-0 xl:mb-0 mb-6"
