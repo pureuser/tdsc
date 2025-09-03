@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>สำนักการขนส่งสินค้า กรมการขนส่งทางบก</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="../../assets/img/logo.png"
+            sizes="32x32"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <!-- ใช้ไฟล์ slide.js ที่แยกออกมาต่างหาก -->
+        <script src="../../assets/js/slide.js"></script>
+        <script src="../../assets/js/read-more.js"></script>
+        <script src="../../assets/js/carousel.js"></script>
+
+        <script src="../../assets/js/menu.js"></script>
+        <script src="../../assets/js/switch.js"></script>
+    </head>
+    <body>
+        <header class="bg-white shadow-sm relative z-30 xl:hidden">
+            <div
+                class="container mx-auto px-4 py-3 flex justify-between items-center"
+            >
+                <!-- Search Icon - Left -->
+                <div></div>
+
+                <!-- Logo - Center -->
+                <img src="../../assets/img/logo.png" class="h-7" alt="" />
+
+                <!-- Menu Button - Right -->
+                <div>
+                    <button
+                        id="mobileMenuToggle"
+                        class="text-[#6B61A0] focus:outline-none"
+                    >
+                        <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4.8125 8.3125H23.1875M4.8125 14H17.1875M4.8125 19.6875H23.1875"
+                                stroke="#6B61A0"
+                                stroke-width="2"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            id="mobileMenuOverlay"
+            class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden opacity-0"
+            style="transition: opacity 0.3s ease-in-out"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobileMenuPanel"
+            class="fixed top-0 right-0 bottom-0 w-full bg-white z-50 transform translate-x-full overflow-y-auto"
+            style="transition: transform 0.3s ease-in-out"
+        >
+            <div
+                class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+            >
+                <span></span>
+
+                <!-- Logo in Menu -->
+                <img src="../../assets/img/logo.png" class="h-7" alt="" />
+                <!-- Close Button -->
+                <button
+                    id="closeMobileMenu"
+                    class="text-[#6B61A0] focus:outline-none"
+                >
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7 21L20.93 7M21 21L7.07 7"
+                            stroke="#6B61A0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="px-10 py-2">
+                <ul class="flex flex-col gap-y-8 mt-10">
+                    <!-- บริการของเรา (with submenu) -->
+                    <li class="">
+                        <div
+                            class="flex justify-between items-center cursor-pointer"
+                            data-submenu="mobileSubmenu1"
+                        >
+                            <span class="text-[#6B61A0] text-2xl font-semibold"
+                                >บริการของเรา</span
+                            >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6 9L12 15L18 9"
+                                    stroke="#6B61A0"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div
+                            id="mobileSubmenu1"
+                            class="max-h-0 overflow-hidden pl-4"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >DLT E-Transport License</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >Q Mark</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >Q Cold Chain</a
+                            ><a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >การขนส่งสินค้าอันตรายทางถนน</a
+                            ><a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ข้อมูลสถิติและการคำนวณต้นทุนการขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ค้นหาเส้นทางการขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ</a
+                            >
+                        </div>
+                    </li>
+
+                    <!-- ประชาสัมพันธ์ -->
+                    <li>
+                        <span class="text-[#6B61A0] text-2xl font-semibold"
+                            >ประชาสัมพันธ์</span
+                        >
+                    </li>
+
+                    <!-- ดาวโหลดเอกสาร (with submenu) -->
+                    <li class="">
+                        <div
+                            class="flex justify-between items-center cursor-pointer"
+                            data-submenu="mobileSubmenu2"
+                        >
+                            <span class="text-[#6B61A0] text-2xl font-semibold"
+                                >ดาวโหลดเอกสาร</span
+                            >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6 9L12 15L18 9"
+                                    stroke="#6B61A0"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div
+                            id="mobileSubmenu2"
+                            class="max-h-0 overflow-hidden pl-4"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >กฏระเบียบและแบบฟอร์ม
+                            </a>
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >คู่มือและรายงานผลการศึกษา
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- เกี่ยวกับเรา -->
+                    <li class="">
+                        <div
+                            class="flex justify-between items-center cursor-pointer"
+                            data-submenu="mobileSubmenu3"
+                        >
+                            <span class="text-[#6B61A0] text-2xl font-semibold"
+                                >เกี่ยวกับเรา</span
+                            >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6 9L12 15L18 9"
+                                    stroke="#6B61A0"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div
+                            id="mobileSubmenu3"
+                            class="max-h-0 overflow-hidden pl-4"
+                            style="transition: max-height 0.3s ease-in-out"
+                        >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนประกอบการขนส่งสินค้า</a
+                            >
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า
+                            </a>
+                            <a
+                                href="#"
+                                class="block py-2 text-[#6B61A0] text-lg hover:text-[#FADA54]"
+                                >ส่วนสถานีขนส่งสินค้า
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- ติดต่อ/สอบถาม -->
+                    <li>
+                        <span class="text-[#6B61A0] text-2xl font-semibold"
+                            >ติดต่อ/สอบถาม</span
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="language-selector">
+                <div class="lang-option" onclick="switchLanguage('th')">
+                    <img
+                        src="https://flagcdn.com/th.svg"
+                        alt="TH"
+                        class="h-6"
+                    />
+                    <div class="lang-text">TH</div>
+                </div>
+                <div class="separator"></div>
+                <div class="lang-option" onclick="switchLanguage('en')">
+                    <img
+                        src="https://flagcdn.com/gb.svg"
+                        alt="EN"
+                        class="h-6"
+                    />
+                    <div class="lang-text">EN</div>
+                </div>
+            </div>
+            <!-- Copyright at bottom -->
+            <div
+                class="w-full text-center text-[#6B61A0] text-sm py-8 mt-8 border-t border-gray-100"
+            >
+                Copyright © 2025 - Truck Data Service Center
+            </div>
+        </div>
+        <!-- Search Overlay (ส่วนนี้ให้ใส่หลัง Mobile Menu ก่อนตัว Section หลัก) -->
+
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <section
+            id="slider-container"
+            class="relative xl:h-screen overflow-hidden h-[60vh]"
+        >
+            <!-- Slide 1 -->
+            <div class="slide" data-slide="1">
+                <!-- Background Image with Blue Overlay -->
+                <div class="absolute inset-0">
+                    <img
+                        src="../../assets/img/tran-f/hero.jpg"
+                        alt="Logistics Trucks"
+                        class="w-full h-full object-cover mix-blend-overlay"
+                    />
+                </div>
+
+                <!-- Purple Section with Curved Edge -->
+                <div
+                    class="absolute top-0 right-0 xl:w-[61%] w-[95%] h-full bg-[url('../../assets/img/curved.png')] bg-no-repeat bg-cover"
+                ></div>
+                <img
+                    src="../../assets/img/sign.png"
+                    alt=""
+                    class="absolute right-0 bottom-0 xl:w-auto w-[50%] h-auto"
+                />
+
+                <!-- Content -->
+                <div class="absolute inset-0 z-20 flex">
+                    <div class="xl:w-[60%] w-2/3"></div>
+                    <div
+                        class="xl:w-[40%] w-[90%] flex flex-col justify-center pl-12 pr-16 xl:mt-0 mt-64 md:mt-28"
+                    >
+                        <div class="flex flex-col gap-y-2">
+                            <div class="flex gap-x-2 items-center">
+                                <img
+                                    src="../../assets/img/sd.png"
+                                    alt="logo กรมการขนส่งทางบก"
+                                    class="xl:w-auto w-[32px] aspect-square"
+                                />
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-white font-bold xl:text-[32px] text-[6px]"
+                                        >ส่วนประกอบการขนส่งสินค้า</span
+                                    >
+                                    <span
+                                        class="text-white font-bold xl:text-[32px] text-[6px]"
+                                        >สำนักการขนส่งสินค้า</span
+                                    >
+                                </div>
+                            </div>
+                            <p
+                                class="text-white font-semibold xl:text-2xl text-[8px]"
+                            >
+                                พันธกิจ ส่วนประกอบการขนส่งสินค้า
+                            </p>
+                            <p
+                                class="text-[#CDCDCD] xl:text-xl text-[6px] xl:w-[421px]"
+                            >
+                                กำกับ ดูแล และควบคุมการประกอบการขนส่งสินค้า
+                                ให้เป็นไปตามกฎหมายและมาตรฐานที่กำหนด จัดทำ
+                                กฎระเบียบที่เกี่ยวข้อง ดูแลการขนส่งสินค้าระหว่าง
+                                ประเทศ และพัฒนาระบบใบอนุญาตอิเล็กทรอนิกส์ (DLT
+                                E-Transport License) เพื่อเพิ่มความสะดวก
+                                ให้กับผู้บริการ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Navigation Bar -->
+            <div
+                class="absolute top-0 left-80 right-0 z-30 px-6 py-4 hidden xl:block"
+            >
+                <div class="flex items-center gap-x-7">
+                    <!-- Logo -->
+                    <div>
+                        <img
+                            src="../../assets/img/logo.png"
+                            alt="TGSE Logo"
+                            class="h-7"
+                        />
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <div
+                        class="hidden md:flex space-x-8 text-white text-base items-center"
+                    >
+                        <!-- บริการของเรา -->
+                        <div class="relative group">
+                            <div class="inline-block">
+                                <a href="#" class="hover:text-yellow-400 block"
+                                    >บริการของเรา</a
+                                >
+                            </div>
+                            <div
+                                class="absolute left-0 mt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 bg-white z-50 rounded-lg shadow-md p-3 flex flex-col gap-y-2"
+                            >
+                                <div class="text-xs w-[195px]">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#">DLT E-Transport License</a>
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#">Q Mark</a>
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#">Q Cold Chain</a>
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#"
+                                            >การขนส่งสินค้าอันตรายทางถนน
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#"
+                                            >ข้อมูลสถิติและการคำนวณต้นทุนการขนส่งสินค้า</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#"
+                                            >ค้นหาเส้นทางการขนส่งสินค้า</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="text-xs">
+                                    <div
+                                        class="flex items-center text-[#6B61A0] font-medium hover:font-bold"
+                                    >
+                                        <a href="#"
+                                            >เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ประชาสัมพันธ์ -->
+                        <div class="relative group">
+                            <a href="#" class="hover:text-yellow-400 block"
+                                >ประชาสัมพันธ์</a
+                            >
+                        </div>
+
+                        <!-- ดาวน์โหลดเอกสาร -->
+                        <div class="relative group">
+                            <div class="inline-block">
+                                <a href="#" class="hover:text-yellow-400 block"
+                                    >ดาวน์โหลดเอกสาร</a
+                                >
+                            </div>
+                            <div
+                                class="absolute right-0 mt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 bg-white z-50 rounded-lg shadow-md p-3 w-[215px]"
+                            >
+                                <div
+                                    class="text-[#6B61A0] flex flex-col text-xs gap-y-2"
+                                >
+                                    <a href="#" class="hover:font-bold"
+                                        >กฏระเบียบและแบบฟอร์ม</a
+                                    >
+                                    <a href="#" class="hover:font-bold"
+                                        >คู่มือและรายงานผลการศึกษา</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- เกี่ยวกับเรา -->
+
+                        <div class="relative group">
+                            <div class="inline-block">
+                                <a href="#" class="hover:text-yellow-400 block"
+                                    >เกี่ยวกับเรา</a
+                                >
+                            </div>
+                            <div
+                                class="absolute right-0 mt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 bg-white z-50 rounded-lg shadow-md p-3 w-[215px]"
+                            >
+                                <div
+                                    class="text-[#6B61A0] flex flex-col text-xs gap-y-2"
+                                >
+                                    <a href="#" class="hover:font-bold"
+                                        >ส่วนประกอบการขนส่งสินค้า</a
+                                    >
+                                    <a href="#" class="hover:font-bold"
+                                        >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                                    >
+                                    <a href="#" class="hover:font-bold"
+                                        >ส่วนสถานีขนส่งสินค้า</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ติดต่อ/สอบถาม -->
+                        <div class="relative group">
+                            <a href="#" class="hover:text-yellow-400 block"
+                                >ติดต่อ/สอบถาม</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="ml-auto">
+                        <div class="language-switcher">
+                            <div
+                                class="selector-btn"
+                                onclick="toggleDropdownswitch()"
+                            >
+                                <img
+                                    id="flag"
+                                    src="https://flagcdn.com/th.svg"
+                                    alt="flag"
+                                />
+                                <span id="lang-code">TH</span>
+                                <div class="arrow">▼</div>
+                            </div>
+                            <div class="dropdown" id="lang-dropdown">
+                                <div class="option" onclick="setLanguage('th')">
+                                    <img
+                                        src="https://flagcdn.com/th.svg"
+                                        alt="TH"
+                                    />
+                                    ไทย (TH)
+                                </div>
+                                <div class="option" onclick="setLanguage('en')">
+                                    <img
+                                        src="https://flagcdn.com/gb.svg"
+                                        alt="EN"
+                                    />
+                                    English (EN)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation Arrows -->
+            <div class="absolute top-1/2 left-4 -translate-y-1/2 z-30 hidden">
+                <button
+                    id="prevSlide"
+                    class="bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all duration-300"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 19l-7-7 7-7"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <div class="absolute top-1/2 right-4 -translate-y-1/2 z-30 hidden">
+                <button
+                    id="nextSlide"
+                    class="bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all duration-300"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-gray-700"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Bullet Navigation will be added by JavaScript -->
+        </section>
+        <!-- ====== SECTION A: พื้นหลังม่วง + หัวข้อ ====== -->
+        <section class="relative w-full">
+            <!-- BG image -->
+            <div
+                class="absolute inset-0 bg-cover bg-center xl:h-[400px]"
+                style="
+                    background-image: url('../../assets/img/main/service.jpg');
+                "
+            ></div>
+            <!-- Gradient overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/70 xl:h-[400px]"
+            ></div>
+
+            <!-- Content (หัวข้อ + เว้นที่ให้การ์ดลอยลงมา) -->
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-5 xl:px-0 pt-12 xl:pt-16 pb-28 xl:pb-36"
+            >
+                <h2
+                    class="text-[#FB9869] xl:text-[44px] text-[32px] font-bold text-center"
+                >
+                    บริการของเรา
+                </h2>
+            </div>
+        </section>
+
+        <!-- ====== ROWS OF CARDS: ลอยทับ/ทะลุลงมา ====== -->
+        <div class="relative z-20 -mt-24 xl:-mt-32">
+            <div class="max-w-7xl mx-auto px-5 xl:px-0 relative">
+                <!-- Mascot -->
+                <img
+                    src="../../assets/img/main/mascot.png"
+                    alt="Mascot"
+                    class="hidden md:block absolute -left-5 xl:-left-4 -top-10 xl:top-14 h-44 xl:h-72 object-contain drop-shadow-2xl pointer-events-none select-none"
+                />
+
+                <!-- Card Grid -->
+                <div
+                    class="grid grid-cols-2  xl:grid-cols-3 gap-3 xl:gap-5 md:pl-24 xl:pl-40"
+                >
+                    <!-- การ์ด 1 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            Q Mark
+                        </h3>
+                    </div>
+                    <!-- การ์ด 2 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            Q Cold Chain
+                        </h3>
+                    </div>
+                    <!-- การ์ด 3 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            Dangerous Goods Transport
+                        </h3>
+                    </div>
+                    <!-- การ์ด 4 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            ข้อมูลสถิติ…ต้นทุนการขนส่งสินค้า
+                        </h3>
+                    </div>
+                    <!-- การ์ด 5 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            เส้นทางการขนส่งสินค้าทางถนนระหว่างประเทศ
+                        </h3>
+                    </div>
+                    <!-- การ์ด 6 -->
+                    <div
+                        class="bg-white shadow-xl rounded-[32px] p-6 flex flex-col items-center gap-y-4"
+                    >
+                        <div
+                            class="h-[80px] xl:h-[110px] w-[80px] xl:w-[110px] bg-gray-100 rounded-2xl"
+                        ></div>
+                        <h3
+                            class="text-[#0BB9D7] xl:text-[22px] text-sm font-semibold text-center leading-snug"
+                        >
+                            ค้นหาเส้นทางการขนส่งสินค้า
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <section
+            class="flex flex-col bg-[##F0EFF6] xl:h-[80vh] h-auto xl:mt-0 mt-0 xl:mb-0 mb-6"
+        >
+            <div class="w-full">
+                <!-- Header -->
+                <div class="text-center pt-20 pb-10">
+                    <h1
+                        class="xl:text-5xl text-[32px] font-bold text-orange-400"
+                    >
+                        ประชาสัมพันธ์ของส่วนประกอบการขนส่งสินค้า
+                    </h1>
+                </div>
+
+                <!-- Carousel -->
+                <div class="relative py-4 px-8">
+                    <div
+                        class="flex overflow-x-scroll pb-8 hide-scrollbar my-0 mx-8"
+                        id="seminar-carousel"
+                    >
+                        <div class="flex pl-6 pr-[7.5rem] gap-5">
+                            <!-- Card 2 -->
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card relative flex-shrink-0 rounded-lg overflow-hidden w-96 bg-white z-10"
+                            >
+                                <div class="h-48 bg-gray-200">
+                                    <img
+                                        src="../../assets/img/truck.png"
+                                        alt="Logistics"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div class="p-5">
+                                    <div
+                                        class="text-base text-[#0BB9D7] font-semibold mb-2"
+                                    >
+                                        ประชาสัมพันธ์
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-orange-400 mb-2"
+                                    >
+                                        การอบรมการใช้งานระบบงานการขนส่งสินค้าด้วยรถบรรทุก
+                                    </h3>
+
+                                    <div
+                                        class="flex justify-between items-center mt-auto"
+                                    >
+                                        <span class="text-xs text-[##BFBFBF]"
+                                            >12 เมษายน 2568</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="nav-button prev" id="seminar-prev-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </div>
+
+                    <div class="nav-button next" id="seminar-next-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center w-[200px] mx-auto mb-0">
+                <button
+                    class="custom-button text-white font-medium py-3 px-8 rounded-full w-full xl:w-auto"
+                >
+                    ดูเพิ่มเติม
+                </button>
+            </div>
+        </section>
+
+        <section
+            class="relative xl:overflow-hidden xl:w-3/5 w-full xl:my-[60px]"
+        >
+            <!-- รูปพื้นหลัง -->
+            <div class="absolute inset-0 bg-cover bg-center"></div>
+
+            <!-- Gradient overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-[#341C63]/90 to-[#4804A8]/90 border xl:rounded-r-full"
+            ></div>
+
+            <!-- เนื้อหา -->
+            <div
+                class="relative z- xl:p-20 py-[64px] flex gap-x-9 xl:flex-row flex-col px-5 gap-5"
+            >
+                <div class="xl:order-0 order-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.336532379754!2d100.55117836023845!3d13.79857170910574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d4e46d6bfdb%3A0x9057e3517d1071c2!2z4Liq4Liz4LiZ4Lix4LiB4LiC4LiZ4Liq4LmI4LiH4LiB4Lij4Li44LiH4LmA4LiX4Lie4Lih4Lir4Liy4LiZ4LiE4Lij4Lie4Li34LmJ4LiZ4LiX4Li14LmIIDU!5e0!3m2!1sth!2sth!4v1756653582649!5m2!1sth!2sth"
+                        class="rounded-[40px] border xl:w-[600px] xl:h-[450px] w-full h-[300px] border-white"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <div class="flex flex-col gap-y-5 xl:order-1 order-0">
+                    <h1
+                        class="font-bold xl:text-[44px] text-2xl text-white xl:text-left text-center"
+                    >
+                        ข้อมูลติดต่อ
+                    </h1>
+                    <div
+                        class="bg-white rounded-[20px] border p-5 shadow-[20px] flex flex-col gap-y-2 xl:w-[428px]"
+                    >
+                        <h1 class="font-bold text-2xl text-[#6B61A0]">
+                            กลุ่มพัฒนาและส่งเสริม การขนส่งสินค้า
+                        </h1>
+                        <p class="text-[#6B61A0] text-base">
+                            สำนักการขนส่งสินค้า (อาคาร 4 ชั้น 6)
+                            กรมการขนส่งทางบก
+                        </p>
+                        <div class="flex mt-1 flex-col gap-y-2">
+                            <p class="font-medium text-base text-[#FB9869]">
+                                ที่อยู่
+                            </p>
+                            <div class="flex gap-x-2 items-start">
+                                <img
+                                    src="../../assets/img/tran-f/icon/Pin_alt.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                >
+                                    1032 ถ.พหลโยธิน แขวงจอมพล เขตจตุจักร กทม.
+                                    10900
+                                </p>
+                            </div>
+                            <div class="flex gap-x-2 items-center">
+                                <img
+                                    src="../../assets/img/tran-f/icon/Phone.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                >
+                                    0-2271-8491
+                                </p>
+                            </div>
+                            <div class="flex gap-x-2 items-center">
+                                <img
+                                    src="../../assets/img/tran-f/icon/Message.png"
+                                    alt=""
+                                />
+                                <p
+                                    class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                >
+                                    70transport@dlt.mail.go.th
+                                </p>
+                            </div>
+                            <div class="flex gap-x-2 items-start">
+                                <img
+                                    src="../../assets/img/tran-f/icon/tabler_world-www.png"
+                                    alt=""
+                                />
+                                <div class="flex flex-col gap-y-1">
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        https://www.thaitruckcenter.com/tdsc/...(ตัวย่อสปค.)
+                                    </p>
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        https://elt.dlt.go.th
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+
+        <footer class="bg-white">
+            <div
+                class="bg-[#F7F7F7] xl:py-20 xl:px-32 py-10 w-full relative h-auto"
+            >
+                <div class="flex flex-col">
+                    <div
+                        class="flex gap-x-5 items-center xl:justify-normal justify-center"
+                    >
+                        <img
+                            src="../../assets/img/sd.png"
+                            alt=""
+                            class="h-[60px] xl:h-auto aspect-square"
+                        />
+                        <img
+                            src="../../assets/img/brand.png"
+                            alt=""
+                            class="xl:h-[84px] h-[67px]"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-5">
+                        <h1
+                            class="xl:text-2xl font-bold text-[#6B61A0] mt-5 xl:text-left text-center text-xl"
+                        >
+                            TRUCK DATA SERVICE CENTER
+                        </h1>
+                        <h1
+                            class="xl:text-2xl font-bold text-[#6B61A0] mt-5 xl:text-left text-center text-xl"
+                        >
+                            ศูนย์รวมข้อมูลการขนส่งด้วยรถบรรทุก
+                        </h1>
+                        <p
+                            class="text-[#6B61A0] text-base mt-2 xl:text-left text-center xl:w-auto w-[280px] mx-auto xl:mx-0"
+                        >
+                            กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า
+                            สำนักการขนส่งสินค้า กรมการขนส่งทางบก
+                        </p>
+                        <!-- desktop -->
+                        <div class="xl:flex hidden mt-5">
+                            <div class="flex gap-x-80">
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex gap-x-2 items-start">
+                                        <img
+                                            src="../../assets/img/icons/Pin_alt.svg"
+                                            alt=""
+                                        />
+                                        <p
+                                            class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                        >
+                                            1032 ถ.พหลโยธิน แขวงจอมพล เขตจตุจักร
+                                            กทม. 10900
+                                        </p>
+                                    </div>
+                                    <div class="flex gap-x-2 items-center">
+                                        <img
+                                            src="../../assets/img/icons/Phone.svg"
+                                            alt=""
+                                        />
+                                        <p
+                                            class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                        >
+                                            0-2271-8490
+                                        </p>
+                                    </div>
+                                    <div class="flex gap-x-2 items-center">
+                                        <img
+                                            src="../../assets/img/icons/Message.svg"
+                                            alt=""
+                                        />
+                                        <p
+                                            class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                        >
+                                            develop_dlt@dlt.mail.go.th
+                                        </p>
+                                    </div>
+                                    <div class="flex mt-3 gap-x-5">
+                                        <a href="#"
+                                            ><img
+                                                src="../../assets/img/icons/fb.svg"
+                                                alt=""
+                                        /></a>
+                                        <a href="#"
+                                            ><img
+                                                src="../../assets/img/icons/line.png"
+                                                class="h-[30px]"
+                                                alt=""
+                                        /></a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h2
+                                        class="text-[#FADA54] font-semibold text-xl mb-2"
+                                    >
+                                        แนะนำ
+                                    </h2>
+                                    <ul
+                                        class="text-[#6B61A0] text-xs tracking-[-0.2px] gap-y-2 flex flex-col list-disc"
+                                    >
+                                        <li>
+                                            <button
+                                                class="w-full flex justify-between items-center tdsc-secondary gap-x-2"
+                                                onclick="toggleDropdown('menu4')"
+                                            >
+                                                <span class=" "
+                                                    >บริการของเรา</span
+                                                >
+                                            </button>
+                                            <div
+                                                id="menu4"
+                                                class="hidden py-2 px-4 rounded-lg mb-2"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >Q Mark</a
+                                                >
+                                                <a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >Q Cold Chain</a
+                                                >
+                                                <a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >DG Transport</a
+                                                ><a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >DLT E-Transport License</a
+                                                ><a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >Freight Cost and
+                                                    Statistics</a
+                                                >
+                                                <a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >Foreign Operators</a
+                                                ><a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >Trip Planner</a
+                                                ><a
+                                                    href="#"
+                                                    class="block py-2 hover:tdsc-primary"
+                                                    >AEC Routes</a
+                                                >
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">ประชาสัมพันธ์</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ผลการศึกษา</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ติดต่อ/สอบถาม</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h2
+                                        class="text-[#FADA54] font-semibold text-xl mb-2"
+                                    >
+                                        เกี่ยวกับเรา
+                                    </h2>
+                                    <ul
+                                        class="text-[#6B61A0] text-xs tracking-[-0.2px] gap-y-2 flex flex-col list-disc"
+                                    >
+                                        <li>
+                                            <a href="#"
+                                                >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">ส่วนสถานีขนส่งสินค้า</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                >ส่วนประกอบการขนส่งสินค้า</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mobile -->
+                        <div class="flex flex-col xl:hidden">
+                            <!-- Dropdown Menus -->
+                            <div class="px-4">
+                                <!-- แนะนำ -->
+                                <div class="border-b border-[#C9C9C9]">
+                                    <button
+                                        class="w-full py-4 flex justify-between items-center tdsc-secondary font-medium"
+                                        onclick="toggleDropdown('menu1')"
+                                    >
+                                        <span
+                                            class="text-base font-medium text-[#EEC102]"
+                                            >แนะนำ</span
+                                        >
+                                        <svg
+                                            id="arrow1"
+                                            class="w-5 h-5 transform transition-transform duration-200"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        id="menu1"
+                                        class="hidden bg-gray-50 py-2 px-4 rounded-lg mb-2"
+                                    >
+                                        <button
+                                            class="w-full py-4 flex justify-between items-center tdsc-secondary font-medium"
+                                            onclick="toggleDropdown('menu3')"
+                                        >
+                                            <span class="text-base font-medium"
+                                                >บริการของเรา</span
+                                            >
+                                            <svg
+                                                id="arrow3"
+                                                class="w-5 h-5 transform transition-transform duration-200"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                        <div
+                                            id="menu3"
+                                            class="hidden bg-gray-50 py-2 px-4 rounded-lg mb-2"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >Q Mark</a
+                                            >
+                                            <a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >Q Cold Chain</a
+                                            >
+                                            <a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >DG Transport</a
+                                            ><a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >DLT E-Transport License</a
+                                            ><a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >Freight Cost and Statistics</a
+                                            >
+                                            <a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >Foreign Operators</a
+                                            ><a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >Trip Planner</a
+                                            ><a
+                                                href="#"
+                                                class="block py-2 hover:tdsc-primary"
+                                                >AEC Routes</a
+                                            >
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ประชาสัมพันธ์</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ผลการศึกษา</a
+                                        ><a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ติดต่อ/สอบถาม</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- เกี่ยวกับเรา -->
+                                <div class="border-b border-[#C9C9C9]">
+                                    <button
+                                        class="w-full py-4 flex justify-between items-center tdsc-secondary font-medium"
+                                        onclick="toggleDropdown('menu2')"
+                                    >
+                                        <span
+                                            class="text-base font-medium text-[#EEC102]"
+                                            >เกี่ยวกับเรา</span
+                                        >
+                                        <svg
+                                            id="arrow2"
+                                            class="w-5 h-5 transform transition-transform duration-200"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        id="menu2"
+                                        class="hidden bg-gray-50 py-2 px-4 rounded-lg mb-2"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ส่วนสถานีขนส่งสินค้า</a
+                                        >
+                                        <a
+                                            href="#"
+                                            class="block py-2 hover:tdsc-primary"
+                                            >ส่วนประกอบการขนส่งสินค้า</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col gap-y-2 mt-5 items-center"
+                            >
+                                <div class="flex gap-x-2 items-start">
+                                    <img
+                                        src="../../assets/img/icons/Pin_alt.svg"
+                                        alt=""
+                                    />
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        1032 ถ.พหลโยธิน แขวงจอมพล เขตจตุจักร
+                                        กทม. 10900
+                                    </p>
+                                </div>
+                                <div class="flex gap-x-2 items-center">
+                                    <img
+                                        src="../../assets/img/icons/Phone.svg"
+                                        alt=""
+                                    />
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        0-2271-8490
+                                    </p>
+                                </div>
+                                <div class="flex gap-x-2 items-center">
+                                    <img
+                                        src="../../assets/img/icons/Message.svg"
+                                        alt=""
+                                    />
+                                    <p
+                                        class="text-[#6B61A0] text-xs w-[160px] font-medium"
+                                    >
+                                        develop_dlt@dlt.mail.go.th
+                                    </p>
+                                </div>
+                                <div class="flex mt-3 gap-x-5">
+                                    <a href="#"
+                                        ><img
+                                            src="../../assets/img/icons/fb.svg"
+                                            alt=""
+                                    /></a>
+                                    <a href="#"
+                                        ><img
+                                            src="../../assets/img/icons/line.png"
+                                            class="h-[30px]"
+                                            alt=""
+                                    /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex mt-10 max-w-[1100px] flex-col px-5 xl:px-0"
+                        >
+                            <hr class="border border-[#BBB6D3] w-full" />
+                            <div
+                                class="flex xl:flex-row justify-between mt-5 flex-col xl:items-start items-center gap-y-5"
+                            >
+                                <div class="flex gap-x-4">
+                                    <a
+                                        href="#"
+                                        class="xl:text-base text-xs text-[#6B61A0]"
+                                    >
+                                        เงื่อนไขและข้อตกลง
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="xl:text-base text-xs text-[#6B61A0]"
+                                    >
+                                        นโยบายความเป็นส่วนตัว
+                                    </a>
+                                </div>
+                                <div class="flex gap-x-3 items-center">
+                                    <p
+                                        class="text-[#6B61A0] xl:text-base text-xs font-medium"
+                                    >
+                                        Copyright
+                                    </p>
+                                    &#169;
+                                    <p
+                                        class="text-[#6B61A0] xl:text-base text-xs font-medium"
+                                    >
+                                        2025 - Truck Data Service Center
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex xl:hidden relative -mb-12">
+                    <img
+                        src="../../assets/img/Image.png"
+                        alt=""
+                        class="ml-auto"
+                    />
+                    <img
+                        src="../../assets/img/Element.png"
+                        alt=""
+                        class="bottom-0 absolute right-0 z-30 w-[60px]"
+                    />
+                </div>
+                <img
+                    src="../../assets/img/Image.png"
+                    alt=""
+                    class="absolute right-0 bottom-0 z-20 hidden xl:flex"
+                />
+                <img
+                    src="../../assets/img/Element.png"
+                    alt=""
+                    class="bottom-0 absolute right-0 z-30 hidden xl:flex"
+                />
+                <hr
+                    class="border-2 xl:border-4 border-[#FADA54] absolute xl:bottom-0 -bottom-2 xl:w-3/4 w-full right-0 rounded-3xl"
+                />
+            </div>
+        </footer>
+    </body>
+</html>
