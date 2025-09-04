@@ -384,3 +384,28 @@ body {
 .xpen-gone {
     display: none !important;
 }
+  /* ===== Overlay เต็มการ์ด เฉพาะมือถือ (< xl) ===== */
+  @media (max-width: 1279px) {
+    /* ให้ article เป็นตำแหน่งอ้างอิง */
+    #logistics-section article { position: relative; }
+
+    /* ยกเลิกการเป็น containing block ของ wrapper รูป
+       เพื่อให้ปุ่ม overlay ยึดกับ article แทน (จะขยายได้เต็มใบ) */
+    #logistics-section .relative.overflow-hidden { position: static !important; }
+
+    /* ปุ่ม overlay: ยึดขอบซ้าย-ขวา-ล่างของ "การ์ด" ให้เต็มใบ */
+    #logistics-section .xpen-toggle {
+      position: absolute !important;
+      left: 0; right: 0; bottom: 0;
+      z-index: 30;
+        width: 100%;
+      /* โค้งตามมุมล่างของการ์ด */
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+  }
+
+  /* เดสก์ท็อป: คงพฤติกรรม/เลย์เอาต์เดิม */
+  @media (min-width: 1280px) {
+    #logistics-section .xpen-toggle { position: static; }
+  }
