@@ -874,7 +874,7 @@
                 </header>
 
                 <!-- Masonry -->
-                <div class="columns-2 gap-6 [column-fill:balance] mt-[80px]">
+                <div class="xl:columns-2 gap-6 [column-fill:balance] mt-[80px]">
                     <!-- Card 1 -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
@@ -1000,7 +1000,7 @@
                                     เพื่อผู้ประกอบการยุคใหม่
                                 </p>
                             </div>
-                            <div class="flex gap-x-5">
+                            <div class="flex gap-5 xl:flex-row flex-col">
                                 <button
                                     class="text-base text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center w-full"
                                 >
@@ -1037,7 +1037,7 @@
 
                             <!-- Row labels (อยู่นอกกล่อง) -->
                             <div
-                                class="mt-5 grid grid-cols-2 gap-4 text-sm font-semibold pb-14"
+                                class="mt-5 xl:grid grid-cols-2 gap-4 text-sm font-semibold pb-14 hidden"
                             >
                                 <p class="text-[#6B61A0] text-xl font-semibold">
                                     มาตรฐาน Q Mark
@@ -1048,58 +1048,73 @@
                             </div>
 
                             <!-- Cards row -->
-                            <div class="grid grid-cols-2 gap-4 ">
+                            <div
+                                class="grid xl:grid-cols-2 gap-x-4 gap-y-20 xl:mt-0 mt-16"
+                            >
                                 <!-- Left card: Q Mark -->
-                                <div class="rounded-2xl bg-[#BBB6D3] p-4">
-                                    <!-- zone สำหรับเลข/ราย -->
-                                    <div class="relative mt-1 min-h-[44px]">
-                                        <!-- เลขลอย -->
-                                        <span
-                                            class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#2D2943]"
-                                            >13</span
-                                        >
-                                        <!-- ราย -->
-                                        <span
-                                            class="absolute right-0 top-4 text-xl font-semibold text-[#2D2943]"
-                                            >ราย</span
-                                        >
-                                    </div>
-                                    <div
-                                        class="my-3 h-[1px] w-20 bg-[#6B61A0]"
-                                    ></div>
+                                <div class="flex flex-col relative">
                                     <p
-                                        class="text-base leading-snug text-[#545B70]"
+                                        class="text-[#6B61A0] text-xl font-semibold xl:hidden block absolute -top-16"
                                     >
-                                        จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
-                                        Q Mark
+                                        มาตรฐาน Q Mark
                                     </p>
+                                    <div class="rounded-2xl bg-[#BBB6D3] p-4">
+                                        <!-- zone สำหรับเลข/ราย -->
+                                        <div class="relative mt-1 min-h-[44px]">
+                                            <!-- เลขลอย -->
+                                            <span
+                                                class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#2D2943]"
+                                                >13</span
+                                            >
+                                            <!-- ราย -->
+                                            <span
+                                                class="absolute right-0 top-4 text-xl font-semibold text-[#2D2943]"
+                                                >ราย</span
+                                            >
+                                        </div>
+                                        <div
+                                            class="my-3 h-[1px] w-20 bg-[#6B61A0]"
+                                        ></div>
+                                        <p
+                                            class="text-base leading-snug text-[#545B70]"
+                                        >
+                                            จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
+                                            Q Mark
+                                        </p>
+                                    </div>
                                 </div>
-
                                 <!-- Right card: Q Cold Chain (มีชิ้นซ้อนโค้ง) -->
-                                <div
-                                    class="relative rounded-2xl bg-[#8FDFED] p-4"
-                                >
-                                    <!-- แผ่นซ้อนโค้งด้านใน (ตกแต่ง) -->
-
-                                    <div class="relative mt-1 min-h-[44px]">
-                                        <span
-                                            class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#054E5A]"
-                                            >000</span
-                                        >
-                                        <span
-                                            class="absolute right-0 top-4 text-xl font-semibold text-[#0E8F98]"
-                                            >ราย</span
-                                        >
-                                    </div>
-                                    <div
-                                        class="my-2 h-[1px] w-20 bg-[#0BB9D7]"
-                                    ></div>
+                                <div class="flex flex-col relative xl:mt-0 mt-16">
                                     <p
-                                        class="text-base leading-snug text-black"
+                                        class="text-[#1395A3] text-xl font-semibold absolute -top-24 xl:hidden block"
                                     >
-                                        จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
-                                        Q Cold Chain
+                                        มาตรฐาน Q Cold Chain
                                     </p>
+                                    <div
+                                        class="relative rounded-2xl bg-[#8FDFED] p-4"
+                                    >
+                                        <!-- แผ่นซ้อนโค้งด้านใน (ตกแต่ง) -->
+
+                                        <div class="relative mt-1 min-h-[44px]">
+                                            <span
+                                                class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#054E5A]"
+                                                >000</span
+                                            >
+                                            <span
+                                                class="absolute right-0 top-4 text-xl font-semibold text-[#0E8F98]"
+                                                >ราย</span
+                                            >
+                                        </div>
+                                        <div
+                                            class="my-2 h-[1px] w-20 bg-[#0BB9D7]"
+                                        ></div>
+                                        <p
+                                            class="text-base leading-snug text-black"
+                                        >
+                                            จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
+                                            Q Cold Chain
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
