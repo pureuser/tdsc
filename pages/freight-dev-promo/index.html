@@ -865,9 +865,11 @@
                 </div>
             </div>
         </section>
-        <section class="w-full mt-[80px]">
+        <!-- ===================== SECTION: กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า ===================== -->
+        <!-- ===================== SECTION: กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า ===================== -->
+        <section class="w-full mt-[80px]" id="logistics-section">
             <div class="mx-auto max-w-[1200px] px-6">
-                <header class="">
+                <header>
                     <p class="text-[44px] text-[#FB9869] font-bold text-center">
                         กลุ่มพัฒนาและส่งเสริมการขนส่งสินค้า
                     </p>
@@ -875,7 +877,7 @@
 
                 <!-- Masonry -->
                 <div class="xl:columns-2 gap-6 [column-fill:balance] mt-[80px]">
-                    <!-- Card 1 -->
+                    <!-- ===================== Card 1 ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
                     >
@@ -885,34 +887,66 @@
                                 วิเคราะห์
                                 และวางแผนเพื่อยกระดับ ทุกมิติของการขนส่ง
                             </h3>
-                            <img
-                                src="../../assets/img/main/m1.png"
-                                alt=""
-                                class="rounded-[20px]"
-                            />
-                            <div class="flex flex-col">
-                                <p
-                                    class="mt-2 xl:text-[40px] font-bold text-[#4905A8] xl"
+
+                            <!-- รูป + ปุ่มโอเวอร์เลย์ -->
+                            <div
+                                class="relative rounded-[20px] overflow-hidden"
+                            >
+                                <img
+                                    src="../../assets/img/main/m1.png"
+                                    alt=""
+                                    class="w-full h-auto block"
+                                />
+                                <button
+                                    class="xpen-toggle xl:hidden absolute inset-x-0 bottom-0 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                    data-expands="#panel-c1"
+                                    aria-controls="panel-c1"
+                                    aria-expanded="false"
+                                    type="button"
                                 >
-                                    “คิดค้น พัฒนา
-                                </p>
-                                <p
-                                    class="mt-2 xl:text-[40px] font-bold text-[#4905A8]"
-                                >
-                                    สร้างมาตรฐาน...
-                                </p>
-                                <p
-                                    class="mt-2 xl:text-[40px] font-bold text-[#4905A8]"
-                                >
-                                    เพื่อคุณภาพการขนส่งไทย”
-                                </p>
+                                    <span data-label
+                                        >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                    >
+                                    <svg
+                                        data-icon
+                                        viewBox="0 0 24 24"
+                                        class="h-5 w-5 transition-transform duration-200"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M7 10l5 5 5-5H7z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- เนื้อหาที่ย่อ/ขยาย -->
+                            <div id="panel-c1" class="xpen-panel">
+                                <div class="flex flex-col">
+                                    <p
+                                        class="mt-2 xl:text-[40px] font-bold text-[#4905A8]"
+                                    >
+                                        “คิดค้น พัฒนา
+                                    </p>
+                                    <p
+                                        class="mt-2 xl:text-[40px] font-bold text-[#4905A8]"
+                                    >
+                                        สร้างมาตรฐาน...
+                                    </p>
+                                    <p
+                                        class="mt-2 xl:text-[40px] font-bold text-[#4905A8]"
+                                    >
+                                        เพื่อคุณภาพการขนส่งไทย”
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Card 2 -->
+                    <!-- ===================== Card 2 ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
+                        id="card2"
                     >
                         <div class="flex flex-col gap-y-5">
                             <h3 class="xl:text-[40px] font-bold text-[#4905A8]">
@@ -920,30 +954,58 @@
                                 การขนส่งสินค้าอันตราย
                             </h3>
 
-                            <img
-                                src="../../assets/img/main/m2.jpg"
-                                alt=""
-                                class="rounded-[20px]"
-                            />
-                            <div class="flex flex-col">
-                                <p class="text-xl text-black">
-                                    ยกระดับการขนส่งวัตถุอันตรายไทยสู่มาตรฐานความปลอดภัย
-                                    ระดับสากลด้วยข้อกำหนด (ADR)
-                                </p>
-                                <p class="text-xl text-black">
-                                    เพื่อให้คุณมั่นใจว่าทุกการขนส่งที่มีความเสี่ยงสูง
-                                    จะได้รับการจัดการอย่างถูกต้องและปลอดภัย
-                                </p>
-                            </div>
-                            <button
-                                class="text-xl text-white font-semibold bg-[#FB9869] rounded-[20px] p-4 text-center"
+                            <div
+                                class="relative rounded-[20px] overflow-hidden"
                             >
-                                ข้อมูลเพิ่มเติม
-                            </button>
+                                <img
+                                    src="../../assets/img/main/m2.jpg"
+                                    alt=""
+                                    class="w-full h-auto block"
+                                />
+                                <button
+                                    class="xpen-toggle xl:hidden absolute inset-x-0 bottom-0 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                    data-expands="#panel-c2"
+                                    aria-controls="panel-c2"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <span data-label
+                                        >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                    >
+                                    <svg
+                                        data-icon
+                                        viewBox="0 0 24 24"
+                                        class="h-5 w-5 transition-transform duration-200"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M7 10l5 5 5-5H7z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div id="panel-c2" class="xpen-panel">
+                                <div class="mt-4 flex flex-col gap-y-3">
+                                    <p class="text-xl text-black">
+                                        ยกระดับการขนส่งวัตถุอันตรายไทยสู่มาตรฐานความปลอดภัยระดับสากลด้วยข้อกำหนด
+                                        (ADR)
+                                    </p>
+                                    <p class="text-xl text-black">
+                                        เพื่อให้คุณมั่นใจว่าทุกการขนส่งที่มีความเสี่ยงสูง
+                                        จะได้รับการจัดการอย่างถูกต้องและปลอดภัย
+                                    </p>
+                                    <button
+                                        class="text-xl text-white font-semibold bg-[#FB9869] rounded-[20px] p-4 text-center"
+                                    >
+                                        ข้อมูลเพิ่มเติม
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
-                    <!-- Card 3 -->
+                    <!-- ===================== Card 3 ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
                     >
@@ -952,28 +1014,57 @@
                                 ขับเคลื่อนธุรกิจการขนส่ง สินค้าด้วยเทคโนโลยี ด้านการขนส่งสินค้า อัจฉริยะ
                                 (Smart Logistics)
                             </h3>
-                            <img
-                                src="../../assets/img/main/m3.jpg"
-                                alt=""
-                                class="rounded-[20px]"
-                            />
-                            <p class="text-base">
-                                สร้างระบบนิเวศน์ด้านโลจิสติกส์
-                                ด้วยนวัตกรรมจากกรมการขนส่งทางบก เพิ่มประสิทธิภาพ
-                                ความปลอดภัย และลดผลกระทบ ต่อสิ่งแวดล้อม
-                                รวมถึงเตรียมความพร้อมต่อการเปลี่ยนผ่านสู่
-                                การขนส่งที่เป็นมิตรกับสิ่งแวดล้อม (Green
-                                Logistics)
-                            </p>
-                            <button
-                                class="text-xl text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center"
+
+                            <div
+                                class="relative rounded-[20px] overflow-hidden"
                             >
-                                ระบบ DLT-TMS
-                            </button>
+                                <img
+                                    src="../../assets/img/main/m3.jpg"
+                                    alt=""
+                                    class="w-full h-auto block"
+                                />
+                                <button
+                                    class="xpen-toggle xl:hidden absolute inset-x-0 bottom-0 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                    data-expands="#panel-c3"
+                                    aria-controls="panel-c3"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <span data-label
+                                        >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                    >
+                                    <svg
+                                        data-icon
+                                        viewBox="0 0 24 24"
+                                        class="h-5 w-5 transition-transform duration-200"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M7 10l5 5 5-5H7z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div id="panel-c3" class="xpen-panel">
+                                <p class="text-base">
+                                    สร้างระบบนิเวศน์ด้านโลจิสติกส์
+                                    ด้วยนวัตกรรมจากกรมการขนส่งทางบก
+                                    เพิ่มประสิทธิภาพ ความปลอดภัย และลดผลกระทบ
+                                    ต่อสิ่งแวดล้อม
+                                    รวมถึงเตรียมความพร้อมต่อการเปลี่ยนผ่านสู่
+                                    Green Logistics
+                                </p>
+                                <button
+                                    class="mt-3 text-xl text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center"
+                                >
+                                    ระบบ DLT-TMS
+                                </button>
+                            </div>
                         </div>
                     </article>
 
-                    <!-- Card 4 -->
+                    <!-- ===================== Card 4 ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
                     >
@@ -983,213 +1074,298 @@
                                 และ Q Cold Chain
                             </h3>
 
-                            <img
-                                src="../../assets/img/main/m4.jpg"
-                                alt=""
-                                class="rounded-[20px]"
-                            />
-                            <div class="flex flex-col">
-                                <p class="mt-2 text-xl font-bold">
-                                    ทำให้การขนส่งเป็นเรื่องของมืออาชีพ...
-                                </p>
-                                <p class="mt-2 text-xl">
-                                    ทำให้การขนส่งเป็นเรื่องของมืออาชีพ...
-                                    ทำให้ทุกเส้นทางปลอดภัยและมั่นใจได้
-                                    กับมาตรฐาน "Q Mark" และ "Q Cold Chain"
-                                    โซลูชันคุณภาพจากกรมการขนส่งทางบก
-                                    เพื่อผู้ประกอบการยุคใหม่
-                                </p>
+                            <div
+                                class="relative rounded-[20px] overflow-hidden"
+                            >
+                                <img
+                                    src="../../assets/img/main/m4.jpg"
+                                    alt=""
+                                    class="w-full h-auto block"
+                                />
+                                <button
+                                    class="xpen-toggle xl:hidden absolute inset-x-0 bottom-0 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                    data-expands="#panel-c4"
+                                    aria-controls="panel-c4"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <span data-label
+                                        >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                    >
+                                    <svg
+                                        data-icon
+                                        viewBox="0 0 24 24"
+                                        class="h-5 w-5 transition-transform duration-200"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M7 10l5 5 5-5H7z"
+                                        />
+                                    </svg>
+                                </button>
                             </div>
-                            <div class="flex gap-5 xl:flex-row flex-col">
-                                <button
-                                    class="text-base text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center w-full"
+
+                            <div id="panel-c4" class="xpen-panel">
+                                <div class="flex flex-col">
+                                    <p class="mt-2 text-xl font-bold">
+                                        ทำให้การขนส่งเป็นเรื่องของมืออาชีพ...
+                                    </p>
+                                    <p class="mt-2 text-xl">
+                                        ทำให้การขนส่งเป็นเรื่องของมืออาชีพ...
+                                        ทำให้ทุกเส้นทางปลอดภัยและมั่นใจได้
+                                        กับมาตรฐาน "Q Mark" และ "Q Cold Chain"
+                                        โซลูชันคุณภาพจากกรมการขนส่งทางบก
+                                        เพื่อผู้ประกอบการยุคใหม่
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex gap-5 xl:flex-row flex-col mt-4"
                                 >
-                                    มาตรฐาน Q Mark
-                                </button>
-                                <button
-                                    class="text-base text-white font-semibold bg-[#0BB9D7] rounded-[20px] p-4 text-center w-full"
-                                >
-                                    มาตรฐาน Q Cold Chain
-                                </button>
+                                    <button
+                                        class="text-base text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center w-full"
+                                    >
+                                        มาตรฐาน Q Mark
+                                    </button>
+                                    <button
+                                        class="text-base text-white font-semibold bg-[#0BB9D7] rounded-[20px] p-4 text-center w-full"
+                                    >
+                                        มาตรฐาน Q Cold Chain
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Card 5 -->
-
-                    <!-- CARD #5 : รายละเอียดตามภาพล่าสุด -->
+                    <!-- ===================== Card 5 (Statistics) ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
                     >
                         <div class="flex flex-col gap-y-5">
-                            <!-- Title + Desc -->
                             <h3 class="xl:text-[40px] font-bold text-[#4905A8]">
-                                สถิติมาตรฐานคุณภาพ<br class="hidden xl:block" />
-                                บริการขนส่งด้วยรถบรรทุก Q Mark
+                                สถิติมาตรฐานคุณภาพ<br
+                                    class="hidden xl:block"
+                                />บริการขนส่งด้วยรถบรรทุก Q Mark
                             </h3>
                             <p class="text-xl">
                                 สถิติการขนส่งสินค้าด้วยรถบรรทุกตามมาตรฐานคุณภาพบริการ
                                 (Q Mark)
                                 เป็นข้อมูลสำคัญด้านความพร้อมและประสิทธิภาพของผู้ประกอบการที่ได้รับการรับรองจากกรมการขนส่งทางบก
-                                และใช้ติดตามสถานการณ์/ประเมินผลคุณภาพการขนส่งของผู้ประกอบการในระดับต่าง
-                                ๆ ได้อย่างเป็นระบบ
                             </p>
 
-                            <!-- Row labels (อยู่นอกกล่อง) -->
-                            <div
-                                class="mt-5 xl:grid grid-cols-2 gap-4 text-sm font-semibold pb-14 hidden"
+                            <!-- ปุ่มโอเวอร์เลย์สไตล์เดียวกัน (ไม่มีรูป เลยทำเป็นแถบม่วงเต็มความกว้าง) -->
+                            <button
+                                class="xpen-toggle xl:hidden relative -mt-10 z-20 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] rounded-[14px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                data-expands="#panel-c5"
+                                aria-controls="panel-c5"
+                                aria-expanded="false"
+                                type="button"
                             >
-                                <p class="text-[#6B61A0] text-xl font-semibold">
-                                    มาตรฐาน Q Mark
-                                </p>
-                                <p class="text-[#1395A3] text-xl font-semibold">
-                                    มาตรฐาน Q Cold Chain
-                                </p>
-                            </div>
-
-                            <!-- Cards row -->
-                            <div
-                                class="grid xl:grid-cols-2 gap-x-4 gap-y-20 xl:mt-0 mt-16"
-                            >
-                                <!-- Left card: Q Mark -->
-                                <div class="flex flex-col relative">
+                                <span data-label
+                                    >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                >
+                                <svg
+                                    data-icon
+                                    viewBox="0 0 24 24"
+                                    class="h-5 w-5 transition-transform duration-200"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M7 10l5 5 5-5H7z"
+                                    />
+                                </svg>
+                            </button>
+                            <div id="panel-c5" class="xpen-panel">
+                                <!-- แถวหัวข้อย่อย (มือถือซ่อน/เดสก์ท็อปโชว์ตามดีไซน์เดิม) -->
+                                <div
+                                    class="mt-5 xl:grid grid-cols-2 gap-4 text-sm font-semibold pb-4 hidden"
+                                >
                                     <p
-                                        class="text-[#6B61A0] text-xl font-semibold xl:hidden block absolute -top-16"
+                                        class="text-[#6B61A0] text-xl font-semibold"
                                     >
                                         มาตรฐาน Q Mark
                                     </p>
-                                    <div class="rounded-2xl bg-[#BBB6D3] p-4">
-                                        <!-- zone สำหรับเลข/ราย -->
-                                        <div class="relative mt-1 min-h-[44px]">
-                                            <!-- เลขลอย -->
-                                            <span
-                                                class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#2D2943]"
-                                                >13</span
-                                            >
-                                            <!-- ราย -->
-                                            <span
-                                                class="absolute right-0 top-4 text-xl font-semibold text-[#2D2943]"
-                                                >ราย</span
-                                            >
-                                        </div>
-                                        <div
-                                            class="my-3 h-[1px] w-20 bg-[#6B61A0]"
-                                        ></div>
-                                        <p
-                                            class="text-base leading-snug text-[#545B70]"
-                                        >
-                                            จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
-                                            Q Mark
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- Right card: Q Cold Chain (มีชิ้นซ้อนโค้ง) -->
-                                <div class="flex flex-col relative xl:mt-0 mt-16">
                                     <p
-                                        class="text-[#1395A3] text-xl font-semibold absolute -top-24 xl:hidden block"
+                                        class="text-[#1395A3] text-xl font-semibold"
                                     >
                                         มาตรฐาน Q Cold Chain
                                     </p>
-                                    <div
-                                        class="relative rounded-2xl bg-[#8FDFED] p-4"
-                                    >
-                                        <!-- แผ่นซ้อนโค้งด้านใน (ตกแต่ง) -->
+                                </div>
 
-                                        <div class="relative mt-1 min-h-[44px]">
-                                            <span
-                                                class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#054E5A]"
-                                                >000</span
-                                            >
-                                            <span
-                                                class="absolute right-0 top-4 text-xl font-semibold text-[#0E8F98]"
-                                                >ราย</span
-                                            >
-                                        </div>
-                                        <div
-                                            class="my-2 h-[1px] w-20 bg-[#0BB9D7]"
-                                        ></div>
+                                <!-- สองกล่องบน -->
+                                <div
+                                    class="grid xl:grid-cols-2 gap-x-4 gap-y-20 xl:mt-0 mt-16"
+                                >
+                                    <!-- ซ้าย -->
+                                    <div class="flex flex-col relative">
                                         <p
-                                            class="text-base leading-snug text-black"
+                                            class="text-[#6B61A0] text-xl font-semibold xl:hidden block absolute -top-14"
                                         >
-                                            จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
-                                            Q Cold Chain
+                                            มาตรฐาน Q Mark
                                         </p>
+                                        <div
+                                            class="rounded-2xl bg-[#BBB6D3] p-4"
+                                        >
+                                            <div
+                                                class="relative mt-1 min-h-[44px]"
+                                            >
+                                                <span
+                                                    class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#2D2943]"
+                                                    >13</span
+                                                >
+                                                <span
+                                                    class="absolute right-0 top-4 text-xl font-semibold text-[#2D2943]"
+                                                    >ราย</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="my-3 h-[1px] w-20 bg-[#6B61A0]"
+                                            ></div>
+                                            <p
+                                                class="text-base leading-snug text-[#545B70]"
+                                            >
+                                                จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
+                                                Q Mark
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- ขวา -->
+                                    <div
+                                        class="flex flex-col relative xl:mt-0 mt-16"
+                                    >
+                                        <p
+                                            class="text-[#1395A3] text-xl font-semibold absolute -top-20 xl:hidden block"
+                                        >
+                                            มาตรฐาน Q Cold Chain
+                                        </p>
+                                        <div
+                                            class="relative rounded-2xl bg-[#8FDFED] p-4"
+                                        >
+                                            <div
+                                                class="relative mt-1 min-h-[44px]"
+                                            >
+                                                <span
+                                                    class="absolute right-0 bottom-5 text-[100px] leading-none font-semibold text-[#054E5A]"
+                                                    >000</span
+                                                >
+                                                <span
+                                                    class="absolute right-0 top-4 text-xl font-semibold text-[#0E8F98]"
+                                                    >ราย</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="my-2 h-[1px] w-20 bg-[#0BB9D7]"
+                                            ></div>
+                                            <p
+                                                class="text-base leading-snug text-black"
+                                            >
+                                                จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐาน
+                                                Q Cold Chain
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- งบประมาณปัจจุบัน -->
-                            <p
-                                class="mt-6 text-xl font-semibold text-[#6B61A0] pb-6"
-                            >
-                                การรับรองในปีงบประมาณ ปัจจุบัน
-                            </p>
-
-                            <div class="mt-2 rounded-2xl bg-[#FADA54] p-5">
-                                <div class="relative mt-1 min-h-[64px]">
-                                    <span
-                                        class="absolute right-0 bottom-10 text-[100px] leading-none font-semibold text-[#4C4572]"
-                                        >436</span
+                                <!-- กล่องใหญ่ -->
+                                <p
+                                    class="xl:mt-6 mt-20 text-xl font-semibold text-[#6B61A0] pb-2"
+                                >
+                                    การรับรองในปีงบประมาณ ปัจจุบัน
+                                </p>
+                                <div class="xl:mt-2 rounded-2xl bg-[#FADA54] p-5 mt-11">
+                                    <div class="relative mt-1 min-h-[64px]">
+                                        <span
+                                            class="absolute right-0 bottom-10 text-[100px] leading-none font-semibold text-[#4C4572]"
+                                            >436</span
+                                        >
+                                        <span
+                                            class="absolute right-0 top-4 text-xl font-semibold text-[#4C4572]"
+                                            >ราย</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="my-3 h-[1px] w-24 bg-[#6B61A0]"
+                                    ></div>
+                                    <p
+                                        class="mt-2 text-base leading-snug text-[#4905A8]"
                                     >
-                                    <span
-                                        class="absolute right-0 top-4 text-xl font-semibold text-[#4C4572]"
-                                        >ราย</span
-                                    >
+                                        จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐานของกรมการขนส่งทางบกในปีงบประมาณปัจจุบัน
+                                    </p>
                                 </div>
 
-                                <!-- แถบในกล่อง (ฟีลเหมือนมีช่อง/เส้นหนา) -->
-                                <div
-                                    class="my-3 h-[1px] w-24 bg-[#6B61A0]"
-                                ></div>
-
-                                <p
-                                    class="mt-2 text-base leading-snug text-[#4905A8]"
-                                >
-                                    จำนวนผู้ประกอบการที่ได้รับการรับรองมาตรฐานของกรมการขนส่งทางบกในปีงบประมาณปัจจุบัน
+                                <p class="mt-4 text-xl text-[#6B61A0]">
+                                    ข้อมูล ณ วันที่ 00/00/00
                                 </p>
+                                <button
+                                    class="text-xl text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center w-full xl:mt-0 mt-2"
+                                >
+                                    ดูสถิติเพิ่มเติม
+                                </button>
                             </div>
-
-                            <!-- วันที่ + ปุ่ม -->
-                            <p class="mt-4 text-xl text-[#6B61A0]">
-                                ข้อมูล ณ วันที่ 00/00/00
-                            </p>
-                            <button
-                                class="text-xl text-white font-semibold bg-[#6B61A0] rounded-[20px] p-4 text-center"
-                            >
-                                ดูสถิติเพิ่มเติม
-                            </button>
                         </div>
                     </article>
 
-                    <!-- Card 6 -->
+                    <!-- ===================== Card 6 ===================== -->
                     <article
                         class="mb-6 break-inside-avoid border-4 border-[#4905A8] p-10 rounded-[40px]"
                     >
                         <div class="flex flex-col gap-y-5">
-                            <!-- Title + Desc -->
                             <h3 class="xl:text-[40px] font-bold text-[#4905A8]">
                                 ขับเคลื่อนขนส่งไทยยุคใหม่ ใส่ใจสิ่งแวดล้อม
                             </h3>
-                            <img
-                                src="../../assets/img/main/m6.jpg"
-                                alt=""
-                                class="rounded-[20px]"
-                            />
-                            <p class="text-base text-black">
-                                เราเชื่อว่าการเติบโตทางธุรกิจและความยั่งยืนของสิ่งแวดล้อมต้องเดิน
-                                ควบคู่กันไป เราจึงมุ่งมั่นขับเคลื่อม Green
-                                Logistics ในทุกมิติ
-                            </p>
-                            <button
-                                class="text-xl text-white font-semibold bg-[#0BB9D7] rounded-[20px] p-4 text-center"
+
+                            <div
+                                class="relative rounded-[20px] overflow-hidden"
                             >
-                                รายงานผลการศึกษา
-                            </button>
+                                <img
+                                    src="../../assets/img/main/m6.jpg"
+                                    alt=""
+                                    class="w-full h-auto block"
+                                />
+                                <button
+                                    class="xpen-toggle xl:hidden absolute inset-x-0 bottom-0 w-full flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold bg-gradient-to-t from-[#6B61A0]/95 via-[#6B61A0]/85 to-transparent backdrop-blur-[2px] focus:outline-none focus:ring-2 focus:ring-white/60"
+                                    data-expands="#panel-c6"
+                                    aria-controls="panel-c6"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <span data-label
+                                        >กดเพื่อดูรายละเอียดเพิ่มเติม</span
+                                    >
+                                    <svg
+                                        data-icon
+                                        viewBox="0 0 24 24"
+                                        class="h-5 w-5 transition-transform duration-200"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M7 10l5 5 5-5H7z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div id="panel-c6" class="xpen-panel">
+                                <p class="text-base text-black">
+                                    เราเชื่อว่าการเติบโตทางธุรกิจและความยั่งยืนของสิ่งแวดล้อมต้องเดินควบคู่กันไป
+                                    เราจึงมุ่งมั่นขับเคลื่อน Green Logistics
+                                    ในทุกมิติ
+                                </p>
+                                <button
+                                    class="mt-3 text-xl text-white font-semibold bg-[#0BB9D7] rounded-[20px] p-4 text-center"
+                                >
+                                    รายงานผลการศึกษา
+                                </button>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
+
+        <!-- ===================== X-Pen CSS ===================== -->
+
+        <!-- ===================== /SECTION ===================== -->
 
         <section
             class="flex flex-col bg-[##F0EFF6] xl:h-[80vh] h-auto xl:mt-0 mt-0 xl:mb-0 mb-6"

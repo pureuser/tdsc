@@ -114,3 +114,28 @@ if (document.readyState === 'loading') {
 } else {
     setupReadMoreToggles()
 }
+// ขยายอย่างเดียว: กดแล้วเปิด panel และซ่อนปุ่ม overlay ถาวร (จนกว่าจะรีเฟรช)
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.xpen-toggle[data-expands]')
+    if (!btn) return
+
+    const sel = btn.getAttribute('data-expands')
+    const panel = document.querySelector(sel)
+    if (!panel) return
+
+    // ถ้ายังไม่เปิด -> เปิด + ซ่อนปุ่ม
+    if (!panel.classList.contains('open')) {
+        panel.classList.add('open')
+        btn.setAttribute('aria-expanded', 'true')
+
+        // เอาข้อความ/ไอคอนออก (กันซ้อน) แล้วซ่อนปุ่ม
+        const label = btn.querySelector('[data-label]')
+        if (label) label.textContent = ''
+        const icon = btn.querySelector('svg[data-icon]')
+        if (icon) icon.remove()
+
+        btn.classList.add('xpen-gone') // << หาย overlay ทันที
+    }
+
+    // ถ้าเปิดอยู่แล้ว ไม่ทำอะไร (ไม่ย่อ)
+})

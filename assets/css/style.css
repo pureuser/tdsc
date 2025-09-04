@@ -361,3 +361,26 @@ body {
     color: #ffd700;
     font-weight: 600;
 }
+/* แผงที่ย่อ/ขยาย (ทุกการ์ด) */
+.xpen-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.xpen-panel.open {
+    max-height: 3000px;
+} /* เพดานสูงพอให้กางครบ */
+
+/* Desktop (>= xl): เปิดคงที่ + ซ่อนปุ่ม */
+@media (min-width: 1280px) {
+    .xpen-panel {
+        max-height: none !important;
+        overflow: visible;
+    }
+    .xpen-toggle {
+        display: none !important;
+    }
+}
+.xpen-gone {
+    display: none !important;
+}
